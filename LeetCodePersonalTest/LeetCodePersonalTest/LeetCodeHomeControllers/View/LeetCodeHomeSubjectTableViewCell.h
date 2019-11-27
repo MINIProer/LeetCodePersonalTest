@@ -10,16 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LeetCodeConfigDataModel;
+
 @interface LeetCodeHomeSubjectTableViewCell : LeetCodeBaseTableViewCell
+
+/** 配置文件Model */
+@property (nonatomic, strong) LeetCodeConfigDataModel *configDataModel;
 
 /** 控制第一个Cell的约束变化 */
 @property (nonatomic, assign) BOOL isFirst;
 
 /** 控制最后一个Cell的约束变化 */
 @property (nonatomic, assign) BOOL isLast;
-
-/** 题目标题 */
-@property (nonatomic, copy) NSString *subjectTitleString;
 
 @end
 

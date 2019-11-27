@@ -8,6 +8,9 @@
 
 #import "LeetCodeHomeSubjectTableViewCell.h"
 
+// Model
+#import "LeetCodeConfigDataModel.h"
+
 // Tool
 #import "LJMacroDefinition.h"
 
@@ -119,10 +122,10 @@
     }
 }
 
-- (void)setSubjectTitleString:(NSString *)subjectTitleString {
-    _subjectTitleString = subjectTitleString;
+- (void)setConfigDataModel:(LeetCodeConfigDataModel *)configDataModel {
+    _configDataModel = configDataModel;
     
-    self.subjectTitleLabel.text = subjectTitleString;
+    self.subjectTitleLabel.text = configDataModel.subject_name;
 }
 
 @end

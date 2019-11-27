@@ -13,11 +13,16 @@
 // View
 #import "LeetCodeHomeSubjectTableViewCell.h"
 
+// Model
+#import "LeetCodeConfigDataListModel.h"
+#import "LeetCodeConfigDataModel.h"
+
 // Tool
 #import "LJMacroDefinition.h"
 
 // Pod
 #import <Masonry/Masonry.h>
+#import <MJExtension/MJExtension.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,7 +30,9 @@
 @property (nonatomic, strong) UITableView *tableView;
 
 /** 配置文件数据源 */
-@property (nonatomic, strong) NSArray *configDataArray;
+@property (nonatomic, strong) NSDictionary *configData;
+
+@property (nonatomic, strong) NSMutableArray *configDataArrayM;
 
 @end
 
@@ -38,21 +45,19 @@
     self.title = @"LeetCode";
     
     [self setupSubViews];
-}
-
-//MARK:-------------------------------------------------------------------------PrivateMethod(私有方法)
-- (void)setupSubViews {
     
-    [self.view addSubview:self.tableView];
+    [self loadConfigData];
 }
 
 //MARK:-------------------------------------------------------------------------UITableViewDataSource & UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.configDataArray.count;
+    return self.configDataArrayM.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LeetCodeConfigDataModel *configDataModel = self.configDataArrayM[indexPath.row];
     
     LeetCodeHomeSubjectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"LeetCodeHomeSubjectTableViewCell%ld", (long)indexPath.row]];
     
@@ -61,7 +66,7 @@
         cell = [[LeetCodeHomeSubjectTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"LeetCodeHomeSubjectTableViewCell%ld", (long)indexPath.row]];
     }
     
-    cell.subjectTitleString = self.configDataArray[indexPath.row];
+    cell.configDataModel = configDataModel;
     
     if (indexPath.row == 0) {
         
@@ -77,20 +82,39 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    LJ_TODO("测试，待优化，需要根据配置文件进行跳转")
+    LeetCodeConfigDataModel *configDataModel = self.configDataArrayM[indexPath.row];
     
-    if (indexPath.row == 0) {
-     
-        LeetCode_1_ViewController *leetCode_1_VC = [[LeetCode_1_ViewController alloc] init];
-        leetCode_1_VC.shouldBlankViewShow = NO;
+    id cls = [[NSClassFromString(configDataModel.subject_scheme) alloc] init];
+    
+    if ([cls isKindOfClass:[LeetCode_1_ViewController class]]) {
+        
+        LeetCode_1_ViewController *leetCode_1_VC = (LeetCode_1_ViewController *)cls;
+        leetCode_1_VC.shouldBlankViewShow = configDataModel.analysis_exist ? NO : YES;
         [self.navigationController pushViewController:leetCode_1_VC animated:YES];
         
-    } else {
+    } else if ([cls isKindOfClass:[LeetCode_2_ViewController class]]) {
         
-        LeetCode_2_ViewController *leetCode_2_VC = [[LeetCode_2_ViewController alloc] init];
-        leetCode_2_VC.shouldBlankViewShow = YES;
+        LeetCode_2_ViewController *leetCode_2_VC = (LeetCode_2_ViewController *)cls;
+        leetCode_2_VC.shouldBlankViewShow = configDataModel.analysis_exist ? NO : YES;
         [self.navigationController pushViewController:leetCode_2_VC animated:YES];
     }
+}
+
+//MARK:-------------------------------------------------------------------------PrivateMethod(私有方法)
+- (void)setupSubViews {
+    
+    [self.view addSubview:self.tableView];
+}
+
+- (void)loadConfigData {
+    
+    LeetCodeConfigDataListModel *configDataListModel = [LeetCodeConfigDataListModel mj_objectWithKeyValues:self.configData];
+    
+    [self.configDataArrayM removeAllObjects];
+    
+    [self.configDataArrayM addObjectsFromArray:configDataListModel.list];
+    
+    [self.tableView reloadData];
 }
 
 //MARK:-------------------------------------------------------------------------Getters & Setters
@@ -109,13 +133,21 @@
     return _tableView;
 }
 
-- (NSArray *)configDataArray {
-    if (_configDataArray == nil) {
+- (NSDictionary *)configData {
+    if (_configData == nil) {
         NSString *configFilePath = [[NSBundle mainBundle] pathForResource:@"LeetCodeSubjectsConfig" ofType:@"plist"];
-        _configDataArray = [NSArray arrayWithContentsOfFile:configFilePath];
+        _configData = [NSDictionary dictionaryWithContentsOfFile:configFilePath];
     }
     
-    return _configDataArray;
+    return _configData;
+}
+
+- (NSMutableArray *)configDataArrayM {
+    if (_configDataArrayM == nil) {
+        _configDataArrayM = [NSMutableArray array];
+    }
+    
+    return _configDataArrayM;
 }
 
 @end
