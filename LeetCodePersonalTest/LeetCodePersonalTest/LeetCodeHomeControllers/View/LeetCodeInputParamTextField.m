@@ -16,6 +16,8 @@
 - (instancetype)init {
     if (self = [super init]) {
         
+        self.backgroundColor = kWhiteColor;
+        
         UIView *paddingView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWIDTH_SCALE(10.f), kWIDTH_SCALE(35.f))];
         paddingView1.backgroundColor = kWhiteColor;
         self.leftView = paddingView1;

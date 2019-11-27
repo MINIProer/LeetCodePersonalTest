@@ -8,10 +8,16 @@
 
 #import "LeetCodeBaseViewController.h"
 
+// View
+#import "LeetCodeBlankView.h"
+
 // Tool
 #import "LJMacroDefinition.h"
 
 @interface LeetCodeBaseViewController ()
+
+/** 空白页 */
+@property (nonatomic, strong) LeetCodeBlankView *blankView;
 
 @end
 
@@ -30,12 +36,13 @@
 //MARK:初始化默认配置
 - (void)setupDefaultConfig {
     
-    self.view.backgroundColor = kWhiteColor;
+    self.view.backgroundColor = kRgbAColor(237, 240, 243, 1);
 }
 
 //MARK:初始化子控件
 - (void)setupSubViews {
     
+    [self.view addSubview:self.blankView];
 }
 
 //MARK:初始化约束
@@ -53,6 +60,23 @@
     NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
     
     return content;
+}
+
+//MARK:-------------------------------------------------------------------------Getters & Setters
+- (LeetCodeBlankView *)blankView {
+    if (_blankView == nil) {
+        _blankView = [[LeetCodeBlankView alloc] init];
+        _blankView.frame = self.view.bounds;
+        _blankView.type = LeetCodeBlankViewTypeDefault;
+    }
+    
+    return _blankView;
+}
+
+- (void)setShouldBlankViewShow:(BOOL)shouldBlankViewShow {
+    _shouldBlankViewShow = shouldBlankViewShow;
+    
+    self.blankView.hidden = !shouldBlankViewShow;
 }
 
 @end

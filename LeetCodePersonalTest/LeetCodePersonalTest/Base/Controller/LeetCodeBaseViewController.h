@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LeetCodeBaseViewController : UIViewController
 
+/** 空白页是否需要展示 */
+@property (nonatomic, assign) BOOL shouldBlankViewShow;
+
 /**
  *  初始化默认配置
  */

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LeetCode_1_ViewController.h"
+#import "LeetCode_2_ViewController.h"
 
 // View
 #import "LeetCodeHomeSubjectTableViewCell.h"
@@ -76,8 +77,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    LeetCode_1_ViewController *leetCode_1_VC = [[LeetCode_1_ViewController alloc] init];
-    [self.navigationController pushViewController:leetCode_1_VC animated:YES];
+    LJ_TODO("测试，待优化，需要根据配置文件进行跳转")
+    
+    if (indexPath.row == 0) {
+     
+        LeetCode_1_ViewController *leetCode_1_VC = [[LeetCode_1_ViewController alloc] init];
+        leetCode_1_VC.shouldBlankViewShow = NO;
+        [self.navigationController pushViewController:leetCode_1_VC animated:YES];
+        
+    } else {
+        
+        LeetCode_2_ViewController *leetCode_2_VC = [[LeetCode_2_ViewController alloc] init];
+        leetCode_2_VC.shouldBlankViewShow = YES;
+        [self.navigationController pushViewController:leetCode_2_VC animated:YES];
+    }
 }
 
 //MARK:-------------------------------------------------------------------------Getters & Setters

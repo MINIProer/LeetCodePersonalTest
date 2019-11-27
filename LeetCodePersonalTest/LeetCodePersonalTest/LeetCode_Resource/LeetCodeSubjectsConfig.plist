@@ -3,5 +3,24 @@
 <plist version="1.0">
 <array>
 	<string>两数之和</string>
+	<string>反转链表</string>
+	<string>最大子序和</string>
+	<string>合并两个有序链表</string>
+	<string>有效的括号</string>
+	<string>买卖股票的最佳时机</string>
+	<string>整数反转</string>
+	<string>回文数</string>
+	<string>爬楼梯</string>
+	<string>合并两个有序数组</string>
+	<string>对称二叉树</string>
+	<string>相交链表</string>
+	<string>最长公共前缀</string>
+	<string>第二高的薪水</string>
+	<string>二叉树的最大深度</string>
+	<string>买卖股票的最佳时机II</string>
+	<string>删除排序数组重的重复项</string>
+	<string>组合两个表</string>
+	<string>二叉树的直径</string>
+	<string>环形链表</string>
 </array>
 </plist>
