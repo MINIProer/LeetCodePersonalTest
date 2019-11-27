@@ -21,7 +21,7 @@
 // Category
 #import "NSString+Category.h"
 #import "NSArray+Category.h"
-#import "LeetCode_1_ViewController+KeyBoardCategory.h"
+#import "LeetCode_1_ViewController+Service.h"
 
 // Pod
 #import <Masonry/Masonry.h>
@@ -210,86 +210,9 @@
     
     if (![LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.numbersString] || ![LeetCodePredicateTool isValidNumberString:self.targetNumberString]) return;
     
-    NSArray *indexList = [self findTheIndexListWithNumbers:[self.numbersString componentsSeparatedByString:@"~"] targetNumber:[self.targetNumberString intValue]];
+    NSArray *indexList = [self LeetCode1Service_findTheIndexListWithNumbers:[self.numbersString componentsSeparatedByString:@"~"] targetNumber:[self.targetNumberString intValue]];
     
-    self.showDebugResultLabel.text = [self getDebugResultStringWithNumbersList:indexList];
-}
-
-//MARK:给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
-- (NSArray *)findTheIndexListWithNumbers:(NSArray *)numbers targetNumber:(int)targetNumber {
-    
-    if (numbers.count == 0 || !numbers || numbers == nil) return @[];
-    
-    NSMutableDictionary *numbersDicM = [NSMutableDictionary dictionary];
-    
-    for (int i = 0; i < numbers.count; i++) {
-        
-        [numbersDicM setObject:@(i) forKey:numbers[i]];
-    }
-    
-    NSMutableArray *targetArray = [NSMutableArray array];
-    
-    for (int i = 0; i < numbers.count; i++) {
-        
-        int findNumber = targetNumber - [numbers[i] intValue];
-        
-        if ([numbers containsObject:[NSString stringWithFormat:@"%d", findNumber]]) {
-            
-            int findIndex = [[numbersDicM valueForKey:[NSString stringWithFormat:@"%d", findNumber]] intValue];
-            
-            [targetArray addObjectsFromArray:@[@(i), @(findIndex)]];
-            
-            return targetArray;
-        }
-    }
-    
-    return @[];
-}
-
-- (NSString *)getDebugResultStringWithNumbersList:(NSArray *)numbersList {
-    
-    NSString *debugResultString = @"";
-    
-    if ([NSArray isEmptyArray:numbersList])  {
-        
-        debugResultString = @"返回值为空数组";
-        
-    } else {
-        
-        for (int i = 0; i < numbersList.count; i++) {
-            
-            if (numbersList.count == 1) {
-                
-                debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"[%@]", numbersList[i]]];
-                
-            } else {
-                
-                if (i == 0) {
-                    
-                    debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"[%@,", numbersList[i]]];
-                    
-                    NSLog(@"%@", debugResultString);
-                    
-                } else if (i == numbersList.count - 1) {
-                    
-                    if (numbersList.count == 2) {
-                        
-                        debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@]", numbersList[i]]];
-                        
-                    } else {
-                        
-                        debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@",%@]", numbersList[i]]];
-                    }
-                    
-                } else {
-                    
-                    debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@", numbersList[i]]];
-                }
-            }
-        }
-    }
-    
-    return debugResultString;
+    self.showDebugResultLabel.text = [self LeetCode1Service_getDebugResultStringWithNumbersList:indexList];
 }
 
 - (void)addNotificationObserver {
@@ -306,12 +229,12 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification {
 
-    [self KeyBoardCategory_keyboardWillShow:notification];
+    [self LeetCode1Service_keyboardWillShow:notification];
 }
 
 - (void)keyboardWillHidden:(NSNotification *)notification {
 
-    [self KeyBoardCategory_keyboardWillHidden:notification];
+    [self LeetCode1Service_keyboardWillHidden:notification];
 }
 
 //MARK:-------------------------------------------------------------------------Getters & Setters

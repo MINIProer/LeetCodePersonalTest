@@ -1,12 +1,13 @@
 //
-//  LeetCode_1_ViewController+KeyBoardCategory.m
+//  LeetCode_1_ViewController+Service.m
 //  LeetCodePersonalTest
 //
 //  Created by 姜书伦 on 2019/11/27.
 //  Copyright © 2019 姜书伦. All rights reserved.
 //
 
-#import "LeetCode_1_ViewController+KeyBoardCategory.h"
+#import "LeetCode_1_ViewController+Service.h"
+#import "NSArray+Category.h"
 
 // View
 #import "LeetCodeInputParamTextField.h"
@@ -20,12 +21,11 @@
 // Framework
 #import <NHMarkdown/NHMarkdown-Swift.h>
 
-@implementation LeetCode_1_ViewController (KeyBoardCategory)
+@implementation LeetCode_1_ViewController (Service)
 
 //MARK:处理键盘将要展示时更新UI约束相关操作
-- (void)KeyBoardCategory_keyboardWillShow:(NSNotification *)notification {
+- (void)LeetCode1Service_keyboardWillShow:(NSNotification *)notification {
     
-    //获取键盘弹出相关信息
     self.keyboardPopHeight = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     
     self.keyboardMoveDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -87,7 +87,7 @@
 }
 
 //MARK:处理键盘将要隐藏时更新UI约束相关操作
-- (void)KeyBoardCategory_keyboardWillHidden:(NSNotification *)notification {
+- (void)LeetCode1Service_keyboardWillHidden:(NSNotification *)notification {
     
     self.thirdKeybordDealFuncTime = 0;
     
@@ -112,6 +112,84 @@
         
         [self.view layoutIfNeeded];
     }];
+}
+
+//MARK:给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+- (NSArray *)LeetCode1Service_findTheIndexListWithNumbers:(NSArray *)numbers targetNumber:(int)targetNumber {
+    
+    if (numbers.count == 0 || !numbers || numbers == nil) return @[];
+    
+    NSMutableDictionary *numbersDicM = [NSMutableDictionary dictionary];
+    
+    for (int i = 0; i < numbers.count; i++) {
+        
+        [numbersDicM setObject:@(i) forKey:numbers[i]];
+    }
+    
+    NSMutableArray *targetArray = [NSMutableArray array];
+    
+    for (int i = 0; i < numbers.count; i++) {
+        
+        int findNumber = targetNumber - [numbers[i] intValue];
+        
+        if ([numbers containsObject:[NSString stringWithFormat:@"%d", findNumber]]) {
+            
+            int findIndex = [[numbersDicM valueForKey:[NSString stringWithFormat:@"%d", findNumber]] intValue];
+            
+            [targetArray addObjectsFromArray:@[@(i), @(findIndex)]];
+            
+            return targetArray;
+        }
+    }
+    
+    return @[];
+}
+
+//MARK:数组转换成目标字符串
+- (NSString *)LeetCode1Service_getDebugResultStringWithNumbersList:(NSArray *)numbersList {
+    
+    NSString *debugResultString = @"";
+    
+    if ([NSArray isEmptyArray:numbersList])  {
+        
+        debugResultString = @"返回值为空数组";
+        
+    } else {
+        
+        for (int i = 0; i < numbersList.count; i++) {
+            
+            if (numbersList.count == 1) {
+                
+                debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"[%@]", numbersList[i]]];
+                
+            } else {
+                
+                if (i == 0) {
+                    
+                    debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"[%@,", numbersList[i]]];
+                    
+                    NSLog(@"%@", debugResultString);
+                    
+                } else if (i == numbersList.count - 1) {
+                    
+                    if (numbersList.count == 2) {
+                        
+                        debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@]", numbersList[i]]];
+                        
+                    } else {
+                        
+                        debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@",%@]", numbersList[i]]];
+                    }
+                    
+                } else {
+                    
+                    debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@", numbersList[i]]];
+                }
+            }
+        }
+    }
+    
+    return debugResultString;
 }
 
 @end

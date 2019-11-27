@@ -25,7 +25,7 @@
 		2B492EC5238D0CAA0075535A /* LeetCodePredicateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EC4238D0CAA0075535A /* LeetCodePredicateTool.m */; };
 		2B492EC8238D1BF00075535A /* LeetCodeDebugButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EC7238D1BF00075535A /* LeetCodeDebugButton.m */; };
 		2B492ECE238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492ECD238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m */; };
-		2B492ED2238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492ED1238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m */; };
+		2B492ED5238E4F830075535A /* LeetCode_1_ViewController+Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492ED4238E4F830075535A /* LeetCode_1_ViewController+Service.m */; };
 		2BA56A04238BB9E000B2C160 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569E8238BB9E000B2C160 /* UIImage+Category.m */; };
 		2BA56A05238BB9E000B2C160 /* NSMutableAttributedString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EC238BB9E000B2C160 /* NSMutableAttributedString+Category.m */; };
 		2BA56A06238BB9E000B2C160 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EF238BB9E000B2C160 /* UILabel+Category.m */; };
@@ -90,8 +90,8 @@
 		2B492EC7238D1BF00075535A /* LeetCodeDebugButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeDebugButton.m; sourceTree = "<group>"; };
 		2B492ECC238D2BFB0075535A /* LeetCodeShowDebugResultLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeShowDebugResultLabel.h; sourceTree = "<group>"; };
 		2B492ECD238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeShowDebugResultLabel.m; sourceTree = "<group>"; };
-		2B492ED0238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeetCode_1_ViewController+KeyBoardCategory.h"; sourceTree = "<group>"; };
-		2B492ED1238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LeetCode_1_ViewController+KeyBoardCategory.m"; sourceTree = "<group>"; };
+		2B492ED3238E4F830075535A /* LeetCode_1_ViewController+Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeetCode_1_ViewController+Service.h"; sourceTree = "<group>"; };
+		2B492ED4238E4F830075535A /* LeetCode_1_ViewController+Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LeetCode_1_ViewController+Service.m"; sourceTree = "<group>"; };
 		2BA5697C238BB49600B2C160 /* LJMacroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMacroDefinition.h; sourceTree = "<group>"; };
 		2BA569E8238BB9E000B2C160 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		2BA569E9238BB9E000B2C160 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		2B492ECF238E448D0075535A /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2B492ED0238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.h */,
-				2B492ED1238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m */,
+				2B492ED3238E4F830075535A /* LeetCode_1_ViewController+Service.h */,
+				2B492ED4238E4F830075535A /* LeetCode_1_ViewController+Service.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -572,7 +572,6 @@
 				2B492EC8238D1BF00075535A /* LeetCodeDebugButton.m in Sources */,
 				2BA56A0B238BB9E000B2C160 /* NSString+Category.m in Sources */,
 				2BA56A05238BB9E000B2C160 /* NSMutableAttributedString+Category.m in Sources */,
-				2B492ED2238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m in Sources */,
 				2BA56A09238BB9E000B2C160 /* UIView+Category.m in Sources */,
 				2BA56A21238BC0AD00B2C160 /* LeetCodeBaseViewController.m in Sources */,
 				2B30840C238B6EB600972B43 /* main.m in Sources */,
@@ -587,6 +586,7 @@
 				2B492EC2238D095A0075535A /* LeetCodeInputTipLabel.m in Sources */,
 				2B492EBF238D02F00075535A /* LeetCodeInputParamTextField.m in Sources */,
 				2BA56A0D238BB9E000B2C160 /* NSAttributedString+Category.m in Sources */,
+				2B492ED5238E4F830075535A /* LeetCode_1_ViewController+Service.m in Sources */,
 				2BA56A34238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m in Sources */,
 				2B492EA3238CC7DE0075535A /* Bridge.swift in Sources */,
 				2BA56A04238BB9E000B2C160 /* UIImage+Category.m in Sources */,
