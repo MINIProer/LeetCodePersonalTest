@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B308404238B6EB300972B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B308402238B6EB300972B43 /* Main.storyboard */; };
+		2B308406238B6EB600972B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B308405238B6EB600972B43 /* Assets.xcassets */; };
+		2B308409238B6EB600972B43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B308407238B6EB600972B43 /* LaunchScreen.storyboard */; };
+		2B30840C238B6EB600972B43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B30840B238B6EB600972B43 /* main.m */; };
+		2B492E9B238CBF4E0075535A /* LeetCodeSubject-1.md in Resources */ = {isa = PBXBuildFile; fileRef = 2B492E9A238CBF4E0075535A /* LeetCodeSubject-1.md */; };
+		2B492EA3238CC7DE0075535A /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EA2238CC7DE0075535A /* Bridge.swift */; };
+		2B492EA6238CCA7E0075535A /* NHMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B492E89238CB74B0075535A /* NHMarkdown.framework */; };
+		2B492EA7238CCA7E0075535A /* NHMarkdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B492E89238CB74B0075535A /* NHMarkdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B492EA9238CCA960075535A /* NHEFCMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B492E87238CB7410075535A /* NHEFCMark.framework */; };
+		2B492EAA238CCA960075535A /* NHEFCMark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B492E87238CB7410075535A /* NHEFCMark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B492EB6238D02850075535A /* LeetCodeBaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EB5238D02850075535A /* LeetCodeBaseTextField.m */; };
+		2B492EB9238D02950075535A /* LeetCodeBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EB8238D02950075535A /* LeetCodeBaseLabel.m */; };
+		2B492EBC238D02A30075535A /* LeetCodeBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EBB238D02A30075535A /* LeetCodeBaseButton.m */; };
+		2B492EBF238D02F00075535A /* LeetCodeInputParamTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EBE238D02F00075535A /* LeetCodeInputParamTextField.m */; };
+		2B492EC2238D095A0075535A /* LeetCodeInputTipLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EC1238D095A0075535A /* LeetCodeInputTipLabel.m */; };
+		2B492EC5238D0CAA0075535A /* LeetCodePredicateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EC4238D0CAA0075535A /* LeetCodePredicateTool.m */; };
+		2B492EC8238D1BF00075535A /* LeetCodeDebugButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EC7238D1BF00075535A /* LeetCodeDebugButton.m */; };
+		2B492ECE238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492ECD238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m */; };
+		2B492ED2238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492ED1238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m */; };
+		2BA56A04238BB9E000B2C160 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569E8238BB9E000B2C160 /* UIImage+Category.m */; };
+		2BA56A05238BB9E000B2C160 /* NSMutableAttributedString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EC238BB9E000B2C160 /* NSMutableAttributedString+Category.m */; };
+		2BA56A06238BB9E000B2C160 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EF238BB9E000B2C160 /* UILabel+Category.m */; };
+		2BA56A07238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569F0238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.m */; };
+		2BA56A08238BB9E000B2C160 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569F4238BB9E000B2C160 /* UIColor+Category.m */; };
+		2BA56A09238BB9E000B2C160 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569F6238BB9E000B2C160 /* UIView+Category.m */; };
+		2BA56A0A238BB9E000B2C160 /* NSData+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569FA238BB9E000B2C160 /* NSData+Category.m */; };
+		2BA56A0B238BB9E000B2C160 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569FD238BB9E000B2C160 /* NSString+Category.m */; };
+		2BA56A0C238BB9E000B2C160 /* NSArray+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569FF238BB9E000B2C160 /* NSArray+Category.m */; };
+		2BA56A0D238BB9E000B2C160 /* NSAttributedString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A03238BB9E000B2C160 /* NSAttributedString+Category.m */; };
+		2BA56A11238BBA2100B2C160 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A10238BBA2100B2C160 /* AppDelegate.m */; };
+		2BA56A21238BC0AD00B2C160 /* LeetCodeBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A1F238BC0AD00B2C160 /* LeetCodeBaseViewController.m */; };
+		2BA56A29238BC22800B2C160 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A24238BC22800B2C160 /* ViewController.m */; };
+		2BA56A2A238BC22800B2C160 /* LeetCode_1_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A28238BC22800B2C160 /* LeetCode_1_ViewController.m */; };
+		2BA56A31238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A30238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m */; };
+		2BA56A34238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A33238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m */; };
+		2BA56A36238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */; };
+		599D9BF83BC15854D5181765 /* Pods_LeetCodePersonalTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965701E809D5801DAB435258 /* Pods_LeetCodePersonalTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B492EA8238CCA7E0075535A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B492EAA238CCA960075535A /* NHEFCMark.framework in Embed Frameworks */,
+				2B492EA7238CCA7E0075535A /* NHMarkdown.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		17B322AD6F4A71C3279BCDAC /* Pods-LeetCodePersonalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeetCodePersonalTest.debug.xcconfig"; path = "Target Support Files/Pods-LeetCodePersonalTest/Pods-LeetCodePersonalTest.debug.xcconfig"; sourceTree = "<group>"; };
+		2B3083F9238B6EB300972B43 /* LeetCodePersonalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCodePersonalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B308403238B6EB300972B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B308405238B6EB600972B43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B308408238B6EB600972B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B30840A238B6EB600972B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B30840B238B6EB600972B43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B492E87238CB7410075535A /* NHEFCMark.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NHEFCMark.framework; sourceTree = "<group>"; };
+		2B492E89238CB74B0075535A /* NHMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NHMarkdown.framework; sourceTree = "<group>"; };
+		2B492E9A238CBF4E0075535A /* LeetCodeSubject-1.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "LeetCodeSubject-1.md"; sourceTree = "<group>"; };
+		2B492EA1238CC7DE0075535A /* LeetCodePersonalTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeetCodePersonalTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B492EA2238CC7DE0075535A /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		2B492EB4238D02850075535A /* LeetCodeBaseTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeBaseTextField.h; sourceTree = "<group>"; };
+		2B492EB5238D02850075535A /* LeetCodeBaseTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeBaseTextField.m; sourceTree = "<group>"; };
+		2B492EB7238D02950075535A /* LeetCodeBaseLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeBaseLabel.h; sourceTree = "<group>"; };
+		2B492EB8238D02950075535A /* LeetCodeBaseLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeBaseLabel.m; sourceTree = "<group>"; };
+		2B492EBA238D02A30075535A /* LeetCodeBaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeBaseButton.h; sourceTree = "<group>"; };
+		2B492EBB238D02A30075535A /* LeetCodeBaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeBaseButton.m; sourceTree = "<group>"; };
+		2B492EBD238D02F00075535A /* LeetCodeInputParamTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeInputParamTextField.h; sourceTree = "<group>"; };
+		2B492EBE238D02F00075535A /* LeetCodeInputParamTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeInputParamTextField.m; sourceTree = "<group>"; };
+		2B492EC0238D095A0075535A /* LeetCodeInputTipLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeInputTipLabel.h; sourceTree = "<group>"; };
+		2B492EC1238D095A0075535A /* LeetCodeInputTipLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeInputTipLabel.m; sourceTree = "<group>"; };
+		2B492EC3238D0CAA0075535A /* LeetCodePredicateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodePredicateTool.h; sourceTree = "<group>"; };
+		2B492EC4238D0CAA0075535A /* LeetCodePredicateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodePredicateTool.m; sourceTree = "<group>"; };
+		2B492EC6238D1BF00075535A /* LeetCodeDebugButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeDebugButton.h; sourceTree = "<group>"; };
+		2B492EC7238D1BF00075535A /* LeetCodeDebugButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeDebugButton.m; sourceTree = "<group>"; };
+		2B492ECC238D2BFB0075535A /* LeetCodeShowDebugResultLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeShowDebugResultLabel.h; sourceTree = "<group>"; };
+		2B492ECD238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeShowDebugResultLabel.m; sourceTree = "<group>"; };
+		2B492ED0238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeetCode_1_ViewController+KeyBoardCategory.h"; sourceTree = "<group>"; };
+		2B492ED1238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LeetCode_1_ViewController+KeyBoardCategory.m"; sourceTree = "<group>"; };
+		2BA5697C238BB49600B2C160 /* LJMacroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMacroDefinition.h; sourceTree = "<group>"; };
+		2BA569E8238BB9E000B2C160 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		2BA569E9238BB9E000B2C160 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		2BA569EB238BB9E000B2C160 /* NSMutableAttributedString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Category.h"; sourceTree = "<group>"; };
+		2BA569EC238BB9E000B2C160 /* NSMutableAttributedString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Category.m"; sourceTree = "<group>"; };
+		2BA569EE238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
+		2BA569EF238BB9E000B2C160 /* UILabel+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
+		2BA569F0238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBAttributeTextTapAction.m"; sourceTree = "<group>"; };
+		2BA569F1238BB9E000B2C160 /* UILabel+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Category.h"; sourceTree = "<group>"; };
+		2BA569F3238BB9E000B2C160 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		2BA569F4238BB9E000B2C160 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		2BA569F6238BB9E000B2C160 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		2BA569F7238BB9E000B2C160 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		2BA569F9238BB9E000B2C160 /* NSData+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Category.h"; sourceTree = "<group>"; };
+		2BA569FA238BB9E000B2C160 /* NSData+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Category.m"; sourceTree = "<group>"; };
+		2BA569FC238BB9E000B2C160 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		2BA569FD238BB9E000B2C160 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		2BA569FF238BB9E000B2C160 /* NSArray+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Category.m"; sourceTree = "<group>"; };
+		2BA56A00238BB9E000B2C160 /* NSArray+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Category.h"; sourceTree = "<group>"; };
+		2BA56A02238BB9E000B2C160 /* NSAttributedString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Category.h"; sourceTree = "<group>"; };
+		2BA56A03238BB9E000B2C160 /* NSAttributedString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Category.m"; sourceTree = "<group>"; };
+		2BA56A0F238BBA2100B2C160 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BA56A10238BBA2100B2C160 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BA56A1F238BC0AD00B2C160 /* LeetCodeBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeetCodeBaseViewController.m; sourceTree = "<group>"; };
+		2BA56A20238BC0AD00B2C160 /* LeetCodeBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeetCodeBaseViewController.h; sourceTree = "<group>"; };
+		2BA56A24238BC22800B2C160 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BA56A25238BC22800B2C160 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BA56A27238BC22800B2C160 /* LeetCode_1_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeetCode_1_ViewController.h; sourceTree = "<group>"; };
+		2BA56A28238BC22800B2C160 /* LeetCode_1_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeetCode_1_ViewController.m; sourceTree = "<group>"; };
+		2BA56A2F238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeBaseTableViewCell.h; sourceTree = "<group>"; };
+		2BA56A30238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeBaseTableViewCell.m; sourceTree = "<group>"; };
+		2BA56A32238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeHomeSubjectTableViewCell.h; sourceTree = "<group>"; };
+		2BA56A33238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeHomeSubjectTableViewCell.m; sourceTree = "<group>"; };
+		2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LeetCodeSubjectsConfig.plist; sourceTree = "<group>"; };
+		965701E809D5801DAB435258 /* Pods_LeetCodePersonalTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeetCodePersonalTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA2AC5216BA53E0F216686 /* Pods-LeetCodePersonalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeetCodePersonalTest.release.xcconfig"; path = "Target Support Files/Pods-LeetCodePersonalTest/Pods-LeetCodePersonalTest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B3083F6238B6EB300972B43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				599D9BF83BC15854D5181765 /* Pods_LeetCodePersonalTest.framework in Frameworks */,
+				2B492EA9238CCA960075535A /* NHEFCMark.framework in Frameworks */,
+				2B492EA6238CCA7E0075535A /* NHMarkdown.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EA688966183C46DC025D08E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				965701E809D5801DAB435258 /* Pods_LeetCodePersonalTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B3083F0238B6EB300972B43 = {
+			isa = PBXGroup;
+			children = (
+				2B3083FB238B6EB300972B43 /* LeetCodePersonalTest */,
+				2B3083FA238B6EB300972B43 /* Products */,
+				A89AE832E89C1595CAE48F98 /* Pods */,
+				0EA688966183C46DC025D08E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B3083FA238B6EB300972B43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B3083F9238B6EB300972B43 /* LeetCodePersonalTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B3083FB238B6EB300972B43 /* LeetCodePersonalTest */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569E5238BB9E000B2C160 /* LeetCodeTool */,
+				2BA56A22238BC22800B2C160 /* LeetCodeHomeControllers */,
+				2BA56A0E238BBA2100B2C160 /* LeetCode_AppDelegate */,
+				2BA56A13238BBA7600B2C160 /* LeetCode_Resource */,
+				2BA56A1D238BC0AD00B2C160 /* Base */,
+				2BA56A12238BBA5000B2C160 /* Other */,
+				2B492E86238CB7260075535A /* Lib */,
+			);
+			path = LeetCodePersonalTest;
+			sourceTree = "<group>";
+		};
+		2B492E86238CB7260075535A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				2B492E89238CB74B0075535A /* NHMarkdown.framework */,
+				2B492E87238CB7410075535A /* NHEFCMark.framework */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		2B492ECF238E448D0075535A /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B492ED0238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.h */,
+				2B492ED1238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		2BA569E5238BB9E000B2C160 /* LeetCodeTool */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569E6238BB9E000B2C160 /* Categories */,
+				2BA5697C238BB49600B2C160 /* LJMacroDefinition.h */,
+				2B492EC3238D0CAA0075535A /* LeetCodePredicateTool.h */,
+				2B492EC4238D0CAA0075535A /* LeetCodePredicateTool.m */,
+			);
+			path = LeetCodeTool;
+			sourceTree = "<group>";
+		};
+		2BA569E6238BB9E000B2C160 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2B492ECF238E448D0075535A /* UIViewController */,
+				2BA569E7238BB9E000B2C160 /* UIImage */,
+				2BA569EA238BB9E000B2C160 /* NSMutableAttributedString */,
+				2BA569ED238BB9E000B2C160 /* UILabel */,
+				2BA569F2238BB9E000B2C160 /* UIColor */,
+				2BA569F5238BB9E000B2C160 /* UIView */,
+				2BA569F8238BB9E000B2C160 /* NSData */,
+				2BA569FB238BB9E000B2C160 /* NSString */,
+				2BA569FE238BB9E000B2C160 /* NSArray */,
+				2BA56A01238BB9E000B2C160 /* NSAttributedString */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2BA569E7238BB9E000B2C160 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569E8238BB9E000B2C160 /* UIImage+Category.m */,
+				2BA569E9238BB9E000B2C160 /* UIImage+Category.h */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		2BA569EA238BB9E000B2C160 /* NSMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569EB238BB9E000B2C160 /* NSMutableAttributedString+Category.h */,
+				2BA569EC238BB9E000B2C160 /* NSMutableAttributedString+Category.m */,
+			);
+			path = NSMutableAttributedString;
+			sourceTree = "<group>";
+		};
+		2BA569ED238BB9E000B2C160 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569EE238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.h */,
+				2BA569EF238BB9E000B2C160 /* UILabel+Category.m */,
+				2BA569F0238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.m */,
+				2BA569F1238BB9E000B2C160 /* UILabel+Category.h */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		2BA569F2238BB9E000B2C160 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569F3238BB9E000B2C160 /* UIColor+Category.h */,
+				2BA569F4238BB9E000B2C160 /* UIColor+Category.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		2BA569F5238BB9E000B2C160 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569F6238BB9E000B2C160 /* UIView+Category.m */,
+				2BA569F7238BB9E000B2C160 /* UIView+Category.h */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		2BA569F8238BB9E000B2C160 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569F9238BB9E000B2C160 /* NSData+Category.h */,
+				2BA569FA238BB9E000B2C160 /* NSData+Category.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		2BA569FB238BB9E000B2C160 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569FC238BB9E000B2C160 /* NSString+Category.h */,
+				2BA569FD238BB9E000B2C160 /* NSString+Category.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		2BA569FE238BB9E000B2C160 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				2BA569FF238BB9E000B2C160 /* NSArray+Category.m */,
+				2BA56A00238BB9E000B2C160 /* NSArray+Category.h */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		2BA56A01238BB9E000B2C160 /* NSAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A02238BB9E000B2C160 /* NSAttributedString+Category.h */,
+				2BA56A03238BB9E000B2C160 /* NSAttributedString+Category.m */,
+			);
+			path = NSAttributedString;
+			sourceTree = "<group>";
+		};
+		2BA56A0E238BBA2100B2C160 /* LeetCode_AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A0F238BBA2100B2C160 /* AppDelegate.h */,
+				2BA56A10238BBA2100B2C160 /* AppDelegate.m */,
+			);
+			path = LeetCode_AppDelegate;
+			sourceTree = "<group>";
+		};
+		2BA56A12238BBA5000B2C160 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2B308407238B6EB600972B43 /* LaunchScreen.storyboard */,
+				2B308402238B6EB300972B43 /* Main.storyboard */,
+				2B30840A238B6EB600972B43 /* Info.plist */,
+				2B30840B238B6EB600972B43 /* main.m */,
+				2B492EA2238CC7DE0075535A /* Bridge.swift */,
+				2B492EA1238CC7DE0075535A /* LeetCodePersonalTest-Bridging-Header.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2BA56A13238BBA7600B2C160 /* LeetCode_Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2B308405238B6EB600972B43 /* Assets.xcassets */,
+				2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */,
+				2B492E9A238CBF4E0075535A /* LeetCodeSubject-1.md */,
+			);
+			path = LeetCode_Resource;
+			sourceTree = "<group>";
+		};
+		2BA56A1D238BC0AD00B2C160 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A1E238BC0AD00B2C160 /* Controller */,
+				2BA56A2E238BC2A400B2C160 /* Model */,
+				2BA56A2D238BC2A400B2C160 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2BA56A1E238BC0AD00B2C160 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A20238BC0AD00B2C160 /* LeetCodeBaseViewController.h */,
+				2BA56A1F238BC0AD00B2C160 /* LeetCodeBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2BA56A22238BC22800B2C160 /* LeetCodeHomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A23238BC22800B2C160 /* LeetCodeSubjectRootController */,
+				2BA56A2B238BC27E00B2C160 /* Model */,
+				2BA56A2C238BC27E00B2C160 /* View */,
+			);
+			path = LeetCodeHomeControllers;
+			sourceTree = "<group>";
+		};
+		2BA56A23238BC22800B2C160 /* LeetCodeSubjectRootController */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A25238BC22800B2C160 /* ViewController.h */,
+				2BA56A24238BC22800B2C160 /* ViewController.m */,
+				2BA56A26238BC22800B2C160 /* LeetCodeSubjectChildControllers */,
+			);
+			path = LeetCodeSubjectRootController;
+			sourceTree = "<group>";
+		};
+		2BA56A26238BC22800B2C160 /* LeetCodeSubjectChildControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A27238BC22800B2C160 /* LeetCode_1_ViewController.h */,
+				2BA56A28238BC22800B2C160 /* LeetCode_1_ViewController.m */,
+			);
+			path = LeetCodeSubjectChildControllers;
+			sourceTree = "<group>";
+		};
+		2BA56A2B238BC27E00B2C160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BA56A2C238BC27E00B2C160 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A32238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.h */,
+				2BA56A33238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m */,
+				2B492EBD238D02F00075535A /* LeetCodeInputParamTextField.h */,
+				2B492EBE238D02F00075535A /* LeetCodeInputParamTextField.m */,
+				2B492EC0238D095A0075535A /* LeetCodeInputTipLabel.h */,
+				2B492EC1238D095A0075535A /* LeetCodeInputTipLabel.m */,
+				2B492ECC238D2BFB0075535A /* LeetCodeShowDebugResultLabel.h */,
+				2B492ECD238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m */,
+				2B492EC6238D1BF00075535A /* LeetCodeDebugButton.h */,
+				2B492EC7238D1BF00075535A /* LeetCodeDebugButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BA56A2D238BC2A400B2C160 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BA56A2F238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.h */,
+				2BA56A30238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m */,
+				2B492EB4238D02850075535A /* LeetCodeBaseTextField.h */,
+				2B492EB5238D02850075535A /* LeetCodeBaseTextField.m */,
+				2B492EB7238D02950075535A /* LeetCodeBaseLabel.h */,
+				2B492EB8238D02950075535A /* LeetCodeBaseLabel.m */,
+				2B492EBA238D02A30075535A /* LeetCodeBaseButton.h */,
+				2B492EBB238D02A30075535A /* LeetCodeBaseButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BA56A2E238BC2A400B2C160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A89AE832E89C1595CAE48F98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17B322AD6F4A71C3279BCDAC /* Pods-LeetCodePersonalTest.debug.xcconfig */,
+				DFFA2AC5216BA53E0F216686 /* Pods-LeetCodePersonalTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B3083F8238B6EB300972B43 /* LeetCodePersonalTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B30840F238B6EB600972B43 /* Build configuration list for PBXNativeTarget "LeetCodePersonalTest" */;
+			buildPhases = (
+				AEC94B5AD8A88D4C9CCA1223 /* [CP] Check Pods Manifest.lock */,
+				2B3083F5238B6EB300972B43 /* Sources */,
+				2B3083F6238B6EB300972B43 /* Frameworks */,
+				2B3083F7238B6EB300972B43 /* Resources */,
+				D11C5E7784E25867CCFCCC7A /* [CP] Embed Pods Frameworks */,
+				2B492EA8238CCA7E0075535A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeetCodePersonalTest;
+			productName = LeetCodePersonalTest;
+			productReference = 2B3083F9238B6EB300972B43 /* LeetCodePersonalTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B3083F1238B6EB300972B43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "姜书伦";
+				TargetAttributes = {
+					2B3083F8238B6EB300972B43 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = 2B3083F4238B6EB300972B43 /* Build configuration list for PBXProject "LeetCodePersonalTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B3083F0238B6EB300972B43;
+			productRefGroup = 2B3083FA238B6EB300972B43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B3083F8238B6EB300972B43 /* LeetCodePersonalTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B3083F7238B6EB300972B43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA56A36238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist in Resources */,
+				2B308409238B6EB600972B43 /* LaunchScreen.storyboard in Resources */,
+				2B492E9B238CBF4E0075535A /* LeetCodeSubject-1.md in Resources */,
+				2B308406238B6EB600972B43 /* Assets.xcassets in Resources */,
+				2B308404238B6EB300972B43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEC94B5AD8A88D4C9CCA1223 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeetCodePersonalTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D11C5E7784E25867CCFCCC7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LeetCodePersonalTest/Pods-LeetCodePersonalTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LeetCodePersonalTest/Pods-LeetCodePersonalTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LeetCodePersonalTest/Pods-LeetCodePersonalTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B3083F5238B6EB300972B43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA56A0A238BB9E000B2C160 /* NSData+Category.m in Sources */,
+				2B492ECE238D2BFB0075535A /* LeetCodeShowDebugResultLabel.m in Sources */,
+				2BA56A07238BB9E000B2C160 /* UILabel+YBAttributeTextTapAction.m in Sources */,
+				2B492EC8238D1BF00075535A /* LeetCodeDebugButton.m in Sources */,
+				2BA56A0B238BB9E000B2C160 /* NSString+Category.m in Sources */,
+				2BA56A05238BB9E000B2C160 /* NSMutableAttributedString+Category.m in Sources */,
+				2B492ED2238E44D90075535A /* LeetCode_1_ViewController+KeyBoardCategory.m in Sources */,
+				2BA56A09238BB9E000B2C160 /* UIView+Category.m in Sources */,
+				2BA56A21238BC0AD00B2C160 /* LeetCodeBaseViewController.m in Sources */,
+				2B30840C238B6EB600972B43 /* main.m in Sources */,
+				2BA56A0C238BB9E000B2C160 /* NSArray+Category.m in Sources */,
+				2B492EBC238D02A30075535A /* LeetCodeBaseButton.m in Sources */,
+				2BA56A2A238BC22800B2C160 /* LeetCode_1_ViewController.m in Sources */,
+				2B492EB6238D02850075535A /* LeetCodeBaseTextField.m in Sources */,
+				2B492EB9238D02950075535A /* LeetCodeBaseLabel.m in Sources */,
+				2BA56A31238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m in Sources */,
+				2BA56A29238BC22800B2C160 /* ViewController.m in Sources */,
+				2BA56A06238BB9E000B2C160 /* UILabel+Category.m in Sources */,
+				2B492EC2238D095A0075535A /* LeetCodeInputTipLabel.m in Sources */,
+				2B492EBF238D02F00075535A /* LeetCodeInputParamTextField.m in Sources */,
+				2BA56A0D238BB9E000B2C160 /* NSAttributedString+Category.m in Sources */,
+				2BA56A34238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m in Sources */,
+				2B492EA3238CC7DE0075535A /* Bridge.swift in Sources */,
+				2BA56A04238BB9E000B2C160 /* UIImage+Category.m in Sources */,
+				2BA56A08238BB9E000B2C160 /* UIColor+Category.m in Sources */,
+				2B492EC5238D0CAA0075535A /* LeetCodePredicateTool.m in Sources */,
+				2BA56A11238BBA2100B2C160 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B308402238B6EB300972B43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B308403238B6EB300972B43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B308407238B6EB600972B43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B308408238B6EB600972B43 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B30840D238B6EB600972B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B30840E238B6EB600972B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B308410238B6EB600972B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B322AD6F4A71C3279BCDAC /* Pods-LeetCodePersonalTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 64Z4G324M6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LeetCodePersonalTest/Lib",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/LeetCodePersonalTest/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.jrayln.LeetCodePersonalTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeetCodePersonalTest/Other/LeetCodePersonalTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2B308411238B6EB600972B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFFA2AC5216BA53E0F216686 /* Pods-LeetCodePersonalTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 64Z4G324M6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LeetCodePersonalTest/Lib",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/LeetCodePersonalTest/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.jrayln.LeetCodePersonalTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeetCodePersonalTest/Other/LeetCodePersonalTest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B3083F4238B6EB300972B43 /* Build configuration list for PBXProject "LeetCodePersonalTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B30840D238B6EB600972B43 /* Debug */,
+				2B30840E238B6EB600972B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B30840F238B6EB600972B43 /* Build configuration list for PBXNativeTarget "LeetCodePersonalTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B308410238B6EB600972B43 /* Debug */,
+				2B308411238B6EB600972B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B3083F1238B6EB300972B43 /* Project object */;
+}

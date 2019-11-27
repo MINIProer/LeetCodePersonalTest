@@ -1,0 +1,4 @@
+framework module NHMarkdown {
+  header "NHMarkdown-Swift.h"
+  requires objc
+}

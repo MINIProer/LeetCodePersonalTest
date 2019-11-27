@@ -1,0 +1,6 @@
+framework module NHEFCMark {
+  umbrella header "NHEFCMark.h"
+
+  export *
+  module * { export * }
+}
