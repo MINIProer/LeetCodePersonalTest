@@ -8,5 +8,6 @@ target 'LeetCodePersonalTest' do
   # Pods for LeetCodePersonalTest
 
 pod 'Masonry'
+pod 'MJExtension'
 
 end

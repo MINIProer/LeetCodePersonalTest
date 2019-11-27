@@ -87,8 +87,6 @@
     return _tipLabel;
 }
 
-
-
 - (void)setType:(LeetCodeBlankViewType)type {
     _type = type;
     
