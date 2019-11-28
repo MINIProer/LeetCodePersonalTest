@@ -9,20 +9,10 @@
 #import "LeetCode_2_ViewController.h"
 
 // Tool
-#import "LJMacroDefinition.h"
-#import "LeetCodePredicateTool.h"
+#import "LeetCodeDetailUITool.h"
 
 // Category
-#import "NSString+Category.h"
-#import "NSArray+Category.h"
-#import "LeetCode_1_ViewController+Service.h"
-
-// Pod
-#import <Masonry/Masonry.h>
-
-// Framework
-#import <NHMarkdown/NHMarkdown-Swift.h>
-#import <WebKit/WebKit.h>
+#import "LeetCodeDetailUITool+Service.h"
 
 @interface LeetCode_2_ViewController ()
 
@@ -33,10 +23,43 @@
 //MARK:-------------------------------------------------------------------------LifeCycle(生命周期)
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self addNotificationObserver];
+    
+    if (self.shouldBlankViewShow) return;
+    
+    [[LeetCodeDetailUITool sharedInstance] setupUIWithType:LeetCodeDetailUIToolTypeSuject_8 superView:self.view];
+    
+    [[LeetCodeDetailUITool sharedInstance] loadHTMLStringWithSubjectIndex:(int)self.subjectIndex];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self removeNotificationObserver];
 }
 
 //MARK:-------------------------------------------------------------------------PrivateMethod(私有方法)
+- (void)addNotificationObserver {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHidden:) name:UIKeyboardWillHideNotification object:nil];
+}
 
-//MARK:-------------------------------------------------------------------------Getters & Setters
+- (void)removeNotificationObserver {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    
+    [[LeetCodeDetailUITool sharedInstance] LeetCodeService_keyboardWillShow:notification];
+}
+
+- (void)keyboardWillHidden:(NSNotification *)notification {
+    
+    [[LeetCodeDetailUITool sharedInstance] LeetCodeService_keyboardWillHidden:notification];
+}
 
 @end

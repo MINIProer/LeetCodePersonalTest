@@ -30,6 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (BOOL)isValidNumberString:(NSString *)numberString;
 
+/**
+ *  是否为整数
+ *
+ *  @param integerString 整数
+ */
++ (BOOL)isValidIntegerString:(NSString *)integerString;
+
 @end
 
 NS_ASSUME_NONNULL_END

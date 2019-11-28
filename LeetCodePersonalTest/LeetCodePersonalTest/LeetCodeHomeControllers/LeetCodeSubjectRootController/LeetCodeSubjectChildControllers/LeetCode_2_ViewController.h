@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LeetCode_2_ViewController : LeetCodeBaseViewController
 
+/** 习题索引号 */
+@property (nonatomic, assign) NSInteger subjectIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END

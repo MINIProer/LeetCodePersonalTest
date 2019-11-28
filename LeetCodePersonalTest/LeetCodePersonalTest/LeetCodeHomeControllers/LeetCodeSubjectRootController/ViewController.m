@@ -95,6 +95,7 @@
     } else if ([cls isKindOfClass:[LeetCode_2_ViewController class]]) {
         
         LeetCode_2_ViewController *leetCode_2_VC = (LeetCode_2_ViewController *)cls;
+        leetCode_2_VC.subjectIndex = indexPath.row;
         leetCode_2_VC.shouldBlankViewShow = configDataModel.analysis_exist ? NO : YES;
         [self.navigationController pushViewController:leetCode_2_VC animated:YES];
     }

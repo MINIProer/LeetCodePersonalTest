@@ -26,4 +26,12 @@
     return [numberStringTest evaluateWithObject:numberString];
 }
 
+//MARK:是否为整数
++ (BOOL)isValidIntegerString:(NSString *)integerString {
+    NSString *integerStringRegex = @"-?\\d{1,}";
+    NSPredicate *integerStringTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", integerStringRegex];
+    
+    return [integerStringTest evaluateWithObject:integerString];
+}
+
 @end

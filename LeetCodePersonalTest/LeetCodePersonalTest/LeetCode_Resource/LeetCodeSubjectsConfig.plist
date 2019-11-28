@@ -25,144 +25,144 @@
 			<string>最大子序和</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>合并两个有序链表</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>有效的括号</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>买卖股票的最佳时机</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>整数反转</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>回文数</string>
 			<key>analysis_exist</key>
-			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<integer>1</integer>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>爬楼梯</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>合并两个有序数组</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>对称二叉树</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>相交链表</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>最长公共前缀</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>第二高的薪水</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>二叉树的最大深度</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>买卖股票的最佳时机II</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>删除排序数组重的重复项</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>组合两个表</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>二叉树的直径</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 		<dict>
 			<key>subject_name</key>
 			<string>环形链表</string>
 			<key>analysis_exist</key>
 			<integer>0</integer>
-            <key>subject_scheme</key>
-            <string>LeetCode_2_ViewController</string>
+			<key>subject_scheme</key>
+			<string>LeetCode_2_ViewController</string>
 		</dict>
 	</array>
 </dict>

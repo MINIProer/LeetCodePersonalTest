@@ -31,6 +31,9 @@
 		2B492EE0238E79700075535A /* LeetCodeBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EDF238E79700075535A /* LeetCodeBaseModel.m */; };
 		2B492EE3238E79B60075535A /* LeetCodeConfigDataListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EE2238E79B60075535A /* LeetCodeConfigDataListModel.m */; };
 		2B492EE6238E79C20075535A /* LeetCodeConfigDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EE5238E79C20075535A /* LeetCodeConfigDataModel.m */; };
+		2B492EE9238F607C0075535A /* LeetCodeDetailUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EE8238F607C0075535A /* LeetCodeDetailUITool.m */; };
+		2B492EEE238F6C060075535A /* LeetCodeDetailUITool+Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EED238F6C060075535A /* LeetCodeDetailUITool+Service.m */; };
+		2B492EF1238F73E10075535A /* LeetCodeSubject-8.md in Resources */ = {isa = PBXBuildFile; fileRef = 2B492EF0238F73E10075535A /* LeetCodeSubject-8.md */; };
 		2BA56A04238BB9E000B2C160 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569E8238BB9E000B2C160 /* UIImage+Category.m */; };
 		2BA56A05238BB9E000B2C160 /* NSMutableAttributedString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EC238BB9E000B2C160 /* NSMutableAttributedString+Category.m */; };
 		2BA56A06238BB9E000B2C160 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EF238BB9E000B2C160 /* UILabel+Category.m */; };
@@ -107,6 +110,11 @@
 		2B492EE2238E79B60075535A /* LeetCodeConfigDataListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeConfigDataListModel.m; sourceTree = "<group>"; };
 		2B492EE4238E79C20075535A /* LeetCodeConfigDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeConfigDataModel.h; sourceTree = "<group>"; };
 		2B492EE5238E79C20075535A /* LeetCodeConfigDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeConfigDataModel.m; sourceTree = "<group>"; };
+		2B492EE7238F607C0075535A /* LeetCodeDetailUITool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeDetailUITool.h; sourceTree = "<group>"; };
+		2B492EE8238F607C0075535A /* LeetCodeDetailUITool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeDetailUITool.m; sourceTree = "<group>"; };
+		2B492EEC238F6C060075535A /* LeetCodeDetailUITool+Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeetCodeDetailUITool+Service.h"; sourceTree = "<group>"; };
+		2B492EED238F6C060075535A /* LeetCodeDetailUITool+Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LeetCodeDetailUITool+Service.m"; sourceTree = "<group>"; };
+		2B492EF0238F73E10075535A /* LeetCodeSubject-8.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "LeetCodeSubject-8.md"; sourceTree = "<group>"; };
 		2BA5697C238BB49600B2C160 /* LJMacroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMacroDefinition.h; sourceTree = "<group>"; };
 		2BA569E8238BB9E000B2C160 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		2BA569E9238BB9E000B2C160 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -235,6 +243,15 @@
 			path = "LeetCodeBlankView(空白页)";
 			sourceTree = "<group>";
 		};
+		2B492EEB238F6BF40075535A /* LeetCodeDetailUITool */ = {
+			isa = PBXGroup;
+			children = (
+				2B492EEC238F6C060075535A /* LeetCodeDetailUITool+Service.h */,
+				2B492EED238F6C060075535A /* LeetCodeDetailUITool+Service.m */,
+			);
+			path = LeetCodeDetailUITool;
+			sourceTree = "<group>";
+		};
 		2BA569E5238BB9E000B2C160 /* LeetCodeTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +259,8 @@
 				2BA5697C238BB49600B2C160 /* LJMacroDefinition.h */,
 				2B492EC3238D0CAA0075535A /* LeetCodePredicateTool.h */,
 				2B492EC4238D0CAA0075535A /* LeetCodePredicateTool.m */,
+				2B492EE7238F607C0075535A /* LeetCodeDetailUITool.h */,
+				2B492EE8238F607C0075535A /* LeetCodeDetailUITool.m */,
 			);
 			path = LeetCodeTool;
 			sourceTree = "<group>";
@@ -249,6 +268,7 @@
 		2BA569E6238BB9E000B2C160 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				2B492EEB238F6BF40075535A /* LeetCodeDetailUITool */,
 				2B492ECF238E448D0075535A /* UIViewController */,
 				2BA569E7238BB9E000B2C160 /* UIImage */,
 				2BA569EA238BB9E000B2C160 /* NSMutableAttributedString */,
@@ -374,6 +394,7 @@
 				2B308405238B6EB600972B43 /* Assets.xcassets */,
 				2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */,
 				2B492E9A238CBF4E0075535A /* LeetCodeSubject-1.md */,
+				2B492EF0238F73E10075535A /* LeetCodeSubject-8.md */,
 			);
 			path = LeetCode_Resource;
 			sourceTree = "<group>";
@@ -553,6 +574,7 @@
 				2BA56A36238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist in Resources */,
 				2B308409238B6EB600972B43 /* LaunchScreen.storyboard in Resources */,
 				2B492E9B238CBF4E0075535A /* LeetCodeSubject-1.md in Resources */,
+				2B492EF1238F73E10075535A /* LeetCodeSubject-8.md in Resources */,
 				2B308406238B6EB600972B43 /* Assets.xcassets in Resources */,
 				2B308404238B6EB300972B43 /* Main.storyboard in Resources */,
 			);
@@ -618,6 +640,7 @@
 				2B492EE3238E79B60075535A /* LeetCodeConfigDataListModel.m in Sources */,
 				2BA56A09238BB9E000B2C160 /* UIView+Category.m in Sources */,
 				2BA56A21238BC0AD00B2C160 /* LeetCodeBaseViewController.m in Sources */,
+				2B492EEE238F6C060075535A /* LeetCodeDetailUITool+Service.m in Sources */,
 				2B30840C238B6EB600972B43 /* main.m in Sources */,
 				2BA56A0C238BB9E000B2C160 /* NSArray+Category.m in Sources */,
 				2B492EBC238D02A30075535A /* LeetCodeBaseButton.m in Sources */,
@@ -631,6 +654,7 @@
 				2B492EBF238D02F00075535A /* LeetCodeInputParamTextField.m in Sources */,
 				2BA56A0D238BB9E000B2C160 /* NSAttributedString+Category.m in Sources */,
 				2B492ED5238E4F830075535A /* LeetCode_1_ViewController+Service.m in Sources */,
+				2B492EE9238F607C0075535A /* LeetCodeDetailUITool.m in Sources */,
 				2BA56A34238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m in Sources */,
 				2B492EA3238CC7DE0075535A /* Bridge.swift in Sources */,
 				2B492EE6238E79C20075535A /* LeetCodeConfigDataModel.m in Sources */,
