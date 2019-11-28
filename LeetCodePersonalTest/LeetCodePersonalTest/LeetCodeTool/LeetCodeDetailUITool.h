@@ -12,8 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, LeetCodeDetailUIToolType) {
-    LeetCodeDetailUIToolTypeSuject_1,   // 两数之和
-    LeetCodeDetailUIToolTypeSuject_8    // 回文数
+    LeetCodeDetailUIToolTypeSuject_1 = 1,       // 两数之和
+    LeetCodeDetailUIToolTypeSuject_8 = 8        // 回文数
 };
 
 @class NHMarkdownView, LeetCodeInputParamTextField, LeetCodeInputParamTextField;
@@ -28,11 +28,11 @@ typedef NS_ENUM(NSUInteger, LeetCodeDetailUIToolType) {
 /** 展示MarkDown文本 */
 @property (nonatomic, strong) NHMarkdownView *mdView;
 
-/** 输入参数TextField */
-@property (nonatomic, strong) LeetCodeInputParamTextField *inputParamTextField;
+/** 输入参数TextField - 1 */
+@property (nonatomic, strong) LeetCodeInputParamTextField *inputParam1TextField;
 
-/** 目标数字参数(整型)TextField */
-@property (nonatomic, strong) LeetCodeInputParamTextField *targetNumberTextField;
+/** 输入参数TextField - 2 */
+@property (nonatomic, strong) LeetCodeInputParamTextField *inputParam2TextField;
 
 /** <计算属性> **/
 

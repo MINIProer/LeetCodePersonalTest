@@ -34,11 +34,11 @@
 
 /** <UI属性> **/
 
-/** 校验提示文案Label */
-@property (nonatomic, strong) LeetCodeInputTipLabel *inputTipLabel;
+/** 校验提示文案Label - 1 */
+@property (nonatomic, strong) LeetCodeInputTipLabel *inputTip1Label;
 
-/** 目标数字参数校验提示文案Label */
-@property (nonatomic, strong) LeetCodeInputTipLabel *targetNumberTipLabel;
+/** 校验提示文案Label - 2 */
+@property (nonatomic, strong) LeetCodeInputTipLabel *inputTip2Label;
 
 /** 编译结果Label */
 @property (nonatomic, strong) LeetCodeShowDebugResultLabel *showDebugResultLabel;
@@ -88,13 +88,30 @@
 - (void)setupSubViewsWithType:(LeetCodeDetailUIToolType)type superView:(UIView *)superView {
     
     switch (type) {
+        case LeetCodeDetailUIToolTypeSuject_1:
+        {
+            [superView addSubview:self.mdView];
+            
+            [superView addSubview:self.inputParam1TextField];
+            
+            [superView addSubview:self.inputTip1Label];
+            
+            [superView addSubview:self.inputParam2TextField];
+            
+            [superView addSubview:self.inputTip2Label];
+            
+            [superView addSubview:self.debugButton];
+            
+            [superView addSubview:self.showDebugResultLabel];
+        }
+            break;
         case LeetCodeDetailUIToolTypeSuject_8:
         {
             [superView addSubview:self.mdView];
             
-            [superView addSubview:self.inputParamTextField];
+            [superView addSubview:self.inputParam1TextField];
             
-            [superView addSubview:self.inputTipLabel];
+            [superView addSubview:self.inputTip1Label];
             
             [superView addSubview:self.showDebugResultLabel];
             
@@ -111,6 +128,48 @@
 - (void)setupConstraintsWithType:(LeetCodeDetailUIToolType)type superView:(UIView *)superView {
     
     switch (type) {
+        case LeetCodeDetailUIToolTypeSuject_1:
+        {
+            [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+            }];
+            
+            [self.inputParam1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+            }];
+            
+            [self.inputTip1Label mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
+                make.left.equalTo(self.inputParam1TextField);
+            }];
+            
+            [self.inputParam2TextField mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+            }];
+            
+            [self.inputTip2Label mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.inputParam2TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
+                make.left.equalTo(self.inputParam2TextField);
+            }];
+            
+            [self.showDebugResultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.inputParam2TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+            }];
+            
+            [self.debugButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.showDebugResultLabel.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.bottom.equalTo(superView).offset(-kWIDTH_SCALE(10.f));
+                make.centerX.equalTo(superView);
+                make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
+            }];
+        }
+            break;
         case LeetCodeDetailUIToolTypeSuject_8:
         {
             [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,19 +177,19 @@
                 make.height.mas_equalTo(kWIDTH_SCALE(250.f));
             }];
             
-            [self.inputParamTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+            [self.inputParam1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
                 make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
                 make.height.mas_equalTo(kWIDTH_SCALE(35.f));
             }];
             
-            [self.inputTipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParamTextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
-                make.left.equalTo(self.inputParamTextField);
+            [self.inputTip1Label mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
+                make.left.equalTo(self.inputParam1TextField);
             }];
             
             [self.showDebugResultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParamTextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
                 make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
             }];
             
@@ -168,15 +227,37 @@
     NSString *subString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     switch (self.type) {
-        case LeetCodeDetailUIToolTypeSuject_8:
+        case LeetCodeDetailUIToolTypeSuject_1:
         {
-            if (textField == self.inputParamTextField) {
+            if (textField == self.inputParam1TextField) {
                 
                 self.param1String = subString;
                 
                 if ([NSString isEmptyString:self.param1String]) {
                     
-                    self.inputTipLabel.status = LeetCodeInputTipLabelStatusDefault;
+                    self.inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
+                }
+                
+            } else if (textField == self.inputParam2TextField) {
+                
+                self.param2String = subString;
+                
+                if ([NSString isEmptyString:self.param2String]) {
+                    
+                    self.inputTip2Label.status = LeetCodeInputTipLabelStatusDefault;
+                }
+            }
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_8:
+        {
+            if (textField == self.inputParam1TextField) {
+                
+                self.param1String = subString;
+                
+                if ([NSString isEmptyString:self.param1String]) {
+                    
+                    self.inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
                 }
                 
             }
@@ -202,15 +283,42 @@
 - (void)debugButtonClickAction {
     
     switch (self.type) {
+        case LeetCodeDetailUIToolTypeSuject_1:
+        {
+            if ([LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param1String]) {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusSuccess;
+                
+            } else {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusFailed;
+            }
+            
+            if ([LeetCodePredicateTool isValidNumberString:self.param2String]) {
+                
+                self.inputTip2Label.status = LeetCodeInputTipLabelStatusSuccess;
+                
+            } else {
+                
+                self.inputTip2Label.status = LeetCodeInputTipLabelStatusFailed;
+            }
+            
+            if (![LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param1String] || ![LeetCodePredicateTool isValidNumberString:self.param2String]) return;
+            
+            NSArray *indexList = [self LeetCode1Service_findTheIndexListWithNumbers:[self.param1String componentsSeparatedByString:@"~"] targetNumber:[self.param2String intValue]];
+            
+            self.showDebugResultLabel.text = [self LeetCode1Service_getDebugResultStringWithNumbersList:indexList];
+        }
+            break;
         case LeetCodeDetailUIToolTypeSuject_8:
         {
             if ([LeetCodePredicateTool isValidIntegerString:self.param1String]) {
         
-                self.inputTipLabel.status = LeetCodeInputTipLabelStatusSuccess;
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusSuccess;
                 
             } else {
         
-                self.inputTipLabel.status = LeetCodeInputTipLabelStatusFailed;
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusFailed;
                 
                 return;
             }
@@ -240,23 +348,42 @@
     return _mdView;
 }
 
-- (LeetCodeInputParamTextField *)inputParamTextField {
-    if (_inputParamTextField == nil) {
-        _inputParamTextField = [[LeetCodeInputParamTextField alloc] init];
-        _inputParamTextField.returnKeyType = UIReturnKeyDone;
-        _inputParamTextField.delegate = self;
+- (LeetCodeInputParamTextField *)inputParam1TextField {
+    if (_inputParam1TextField == nil) {
+        _inputParam1TextField = [[LeetCodeInputParamTextField alloc] init];
+        _inputParam1TextField.returnKeyType = UIReturnKeyDone;
+        _inputParam1TextField.delegate = self;
     }
     
-    return _inputParamTextField;
+    return _inputParam1TextField;
 }
 
-- (LeetCodeInputTipLabel *)inputTipLabel {
-    if (_inputTipLabel == nil) {
-        _inputTipLabel = [[LeetCodeInputTipLabel alloc] init];
-        _inputTipLabel.status = LeetCodeInputTipLabelStatusDefault;
+- (LeetCodeInputTipLabel *)inputTip1Label {
+    if (_inputTip1Label == nil) {
+        _inputTip1Label = [[LeetCodeInputTipLabel alloc] init];
+        _inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
     }
     
-    return _inputTipLabel;
+    return _inputTip1Label;
+}
+
+- (LeetCodeInputParamTextField *)inputParam2TextField {
+    if (_inputParam2TextField == nil) {
+        _inputParam2TextField = [[LeetCodeInputParamTextField alloc] init];
+        _inputParam2TextField.returnKeyType = UIReturnKeyDone;
+        _inputParam2TextField.delegate = self;
+    }
+    
+    return _inputParam2TextField;
+}
+
+- (LeetCodeInputTipLabel *)inputTip2Label {
+    if (_inputTip2Label == nil) {
+        _inputTip2Label = [[LeetCodeInputTipLabel alloc] init];
+        _inputTip2Label.status = LeetCodeInputTipLabelStatusDefault;
+    }
+    
+    return _inputTip2Label;
 }
 
 - (LeetCodeShowDebugResultLabel *)showDebugResultLabel {
@@ -294,9 +421,15 @@
     _type = type;
     
     switch (type) {
+        case LeetCodeDetailUIToolTypeSuject_1:
+        {
+            self.inputParam1TextField.placeholder = @"请输入整型数字，并用英文~分隔";
+            self.inputParam2TextField.placeholder = @"请输入目标整形数字";
+        }
+            break;
         case LeetCodeDetailUIToolTypeSuject_8:
         {
-            self.inputParamTextField.placeholder = @"请输入一个整数";
+            self.inputParam1TextField.placeholder = @"请输入一个整数";
         }
             break;
             

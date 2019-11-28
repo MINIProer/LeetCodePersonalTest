@@ -18,9 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** 是否存在习题解析【0:不存在、1:存在】 */
 @property (nonatomic, assign) NSInteger analysis_exist;
 
-/** 习题详情页名称 */
-@property (nonatomic, strong) NSString *subject_scheme;
-
 @end
 
 NS_ASSUME_NONNULL_END

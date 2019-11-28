@@ -36,4 +36,4 @@
 ​  
 ```   
 
-​[Author-Jrayln](https://github.com/MINIProer)
+​[Author-JR](https://github.com/MINIProer)

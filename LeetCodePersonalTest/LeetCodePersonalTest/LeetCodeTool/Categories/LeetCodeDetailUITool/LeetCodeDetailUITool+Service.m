@@ -37,13 +37,62 @@
         [UIView animateWithDuration:self.keyboardMoveDuration animations:^{
             
             switch (self.type) {
+                case LeetCodeDetailUIToolTypeSuject_1:
+                {
+                    if ([self.inputParam1TextField isFirstResponder]) {
+                        
+                        if (self.keyboardPopHeight) {
+                            
+                            [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                                make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
+                            }];
+                            
+                            [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                            }];
+                            
+                            [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+                                make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                            }];
+                        }
+                        
+                    } else if ([self.inputParam2TextField isFirstResponder]) {
+                        
+                        [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                            make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                            make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                            make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
+                        }];
+                        
+                        [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                            
+                            make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                            make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                            make.bottom.equalTo(self.inputParam2TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                        }];
+                        
+                        [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                            make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                            make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+                            make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                        }];
+                    }
+
+                }
+                    break;
                 case LeetCodeDetailUIToolTypeSuject_8:
                 {
-                    if ([self.inputParamTextField isFirstResponder]) {
+                    if ([self.inputParam1TextField isFirstResponder]) {
         
                         if (self.keyboardPopHeight) {
         
-                            [self.inputParamTextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                            [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
                                 make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
                                 make.height.mas_equalTo(kWIDTH_SCALE(35.f));
                                 make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
@@ -52,7 +101,7 @@
                             [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
                                 make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
                                 make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-                                make.bottom.equalTo(self.inputParamTextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                                make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
                             }];
                         }
         
@@ -77,6 +126,26 @@
     [UIView animateWithDuration:self.keyboardMoveDuration animations:^{
         
         switch (self.type) {
+            case LeetCodeDetailUIToolTypeSuject_1:
+            {
+                [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                    make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+                }];
+                
+                [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                    make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                    make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                }];
+                
+                [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                    make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                    make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                }];
+            }
+                break;
             case LeetCodeDetailUIToolTypeSuject_8:
             {
                 [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -84,7 +153,7 @@
                     make.height.mas_equalTo(kWIDTH_SCALE(250.f));
                 }];
         
-                [self.inputParamTextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
                     make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
                     make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
                     make.height.mas_equalTo(kWIDTH_SCALE(35.f));

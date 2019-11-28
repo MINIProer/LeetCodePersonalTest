@@ -1,12 +1,12 @@
 //
-//  LeetCode_2_ViewController.m
+//  LeetCodeSubjectDetailViewController.m
 //  LeetCodePersonalTest
 //
-//  Created by 姜书伦 on 2019/11/27.
+//  Created by 姜书伦 on 2019/11/28.
 //  Copyright © 2019 姜书伦. All rights reserved.
 //
 
-#import "LeetCode_2_ViewController.h"
+#import "LeetCodeSubjectDetailViewController.h"
 
 // Tool
 #import "LeetCodeDetailUITool.h"
@@ -14,11 +14,14 @@
 // Category
 #import "LeetCodeDetailUITool+Service.h"
 
-@interface LeetCode_2_ViewController ()
+@interface LeetCodeSubjectDetailViewController ()
+
+/** 习题详情页业务组件工具 */
+@property (nonatomic, strong) LeetCodeDetailUITool *detailUITool;
 
 @end
 
-@implementation LeetCode_2_ViewController
+@implementation LeetCodeSubjectDetailViewController
 
 //MARK:-------------------------------------------------------------------------LifeCycle(生命周期)
 - (void)viewDidLoad {
@@ -28,9 +31,9 @@
     
     if (self.shouldBlankViewShow) return;
     
-    [[LeetCodeDetailUITool sharedInstance] setupUIWithType:LeetCodeDetailUIToolTypeSuject_8 superView:self.view];
+    [self.detailUITool setupUIWithType:((int)self.subjectIndex + 1) superView:self.view];
     
-    [[LeetCodeDetailUITool sharedInstance] loadHTMLStringWithSubjectIndex:(int)self.subjectIndex];
+    [self.detailUITool loadHTMLStringWithSubjectIndex:(int)self.subjectIndex];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -54,12 +57,21 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification {
     
-    [[LeetCodeDetailUITool sharedInstance] LeetCodeService_keyboardWillShow:notification];
+    [self.detailUITool LeetCodeService_keyboardWillShow:notification];
 }
 
 - (void)keyboardWillHidden:(NSNotification *)notification {
     
-    [[LeetCodeDetailUITool sharedInstance] LeetCodeService_keyboardWillHidden:notification];
+    [self.detailUITool LeetCodeService_keyboardWillHidden:notification];
+}
+
+//MARK:-------------------------------------------------------------------------Getters & Setters
+- (LeetCodeDetailUITool *)detailUITool {
+    if (_detailUITool == nil) {
+        _detailUITool = [[LeetCodeDetailUITool alloc] init];
+    }
+    
+    return _detailUITool;
 }
 
 @end

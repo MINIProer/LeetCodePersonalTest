@@ -1,8 +1,8 @@
 //
-//  LeetCode_2_ViewController.h
+//  LeetCodeSubjectDetailViewController.h
 //  LeetCodePersonalTest
 //
-//  Created by 姜书伦 on 2019/11/27.
+//  Created by 姜书伦 on 2019/11/28.
 //  Copyright © 2019 姜书伦. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LeetCode_2_ViewController : LeetCodeBaseViewController
+@interface LeetCodeSubjectDetailViewController : LeetCodeBaseViewController
 
 /** 习题索引号 */
 @property (nonatomic, assign) NSInteger subjectIndex;

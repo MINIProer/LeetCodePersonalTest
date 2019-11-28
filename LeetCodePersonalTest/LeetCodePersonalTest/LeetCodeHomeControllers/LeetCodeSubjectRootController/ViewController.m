@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LeetCode_1_ViewController.h"
-#import "LeetCode_2_ViewController.h"
+#import "LeetCodeSubjectDetailViewController.h"
 
 // View
 #import "LeetCodeHomeSubjectTableViewCell.h"
@@ -32,6 +31,7 @@
 /** 配置文件数据源 */
 @property (nonatomic, strong) NSDictionary *configData;
 
+/** 列表数据源 */
 @property (nonatomic, strong) NSMutableArray *configDataArrayM;
 
 @end
@@ -84,21 +84,10 @@
     
     LeetCodeConfigDataModel *configDataModel = self.configDataArrayM[indexPath.row];
     
-    id cls = [[NSClassFromString(configDataModel.subject_scheme) alloc] init];
-    
-    if ([cls isKindOfClass:[LeetCode_1_ViewController class]]) {
-        
-        LeetCode_1_ViewController *leetCode_1_VC = (LeetCode_1_ViewController *)cls;
-        leetCode_1_VC.shouldBlankViewShow = configDataModel.analysis_exist ? NO : YES;
-        [self.navigationController pushViewController:leetCode_1_VC animated:YES];
-        
-    } else if ([cls isKindOfClass:[LeetCode_2_ViewController class]]) {
-        
-        LeetCode_2_ViewController *leetCode_2_VC = (LeetCode_2_ViewController *)cls;
-        leetCode_2_VC.subjectIndex = indexPath.row;
-        leetCode_2_VC.shouldBlankViewShow = configDataModel.analysis_exist ? NO : YES;
-        [self.navigationController pushViewController:leetCode_2_VC animated:YES];
-    }
+    LeetCodeSubjectDetailViewController *leetCodeDetailViewController = [[LeetCodeSubjectDetailViewController alloc] init];
+    leetCodeDetailViewController.subjectIndex = indexPath.row;
+    leetCodeDetailViewController.shouldBlankViewShow = configDataModel.analysis_exist ? NO : YES;
+    [self.navigationController pushViewController:leetCodeDetailViewController animated:YES];
 }
 
 //MARK:-------------------------------------------------------------------------PrivateMethod(私有方法)
