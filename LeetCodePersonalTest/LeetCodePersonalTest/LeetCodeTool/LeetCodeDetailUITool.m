@@ -29,6 +29,7 @@
 // Framework
 #import <NHMarkdown/NHMarkdown-Swift.h>
 #import <WebKit/WebKit.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface LeetCodeDetailUITool () <UITextFieldDelegate>
 
@@ -327,7 +328,7 @@
             if (![LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param1String] || ![LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param2String]) return;
 
             NSArray *mergedList = [self LeetCode10Service_mergeOrderedArray:[NSArray ascendArray:[self.param2String componentsSeparatedByString:@"~"]] toAnotherOrderedArray:[NSArray ascendArray:[self.param1String componentsSeparatedByString:@"~"]]];
-
+            
             self.showDebugResultLabel.text = [self LeetCode1Service_getDebugResultStringWithNumbersList:mergedList];
         }
             break;
