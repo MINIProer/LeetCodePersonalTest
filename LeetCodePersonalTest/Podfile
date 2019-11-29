@@ -9,6 +9,6 @@ target 'LeetCodePersonalTest' do
 
 pod 'Masonry'
 pod 'MJExtension'
-pod 'MBProgressHUD'
+pod 'SVProgressHUD'
 
 end
