@@ -188,4 +188,26 @@
     return tmpArr;
 }
 
+//MARK:数组升序
++ (NSArray *)ascendArray:(NSArray *)array {
+    
+    NSArray *resultArray = [array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+       
+        if ([obj1 integerValue] > [obj2 integerValue]) {
+            
+            return NSOrderedDescending;
+            
+        } else if ([obj1 integerValue] < [obj2 integerValue]){
+            
+            return NSOrderedAscending;
+            
+        } else {
+            
+            return NSOrderedSame;
+        }
+    }];
+    
+    return resultArray;
+}
+
 @end

@@ -36,45 +36,22 @@
         
         [UIView animateWithDuration:self.keyboardMoveDuration animations:^{
             
-            switch (self.type) {
-                case LeetCodeDetailUIToolTypeSuject_1:
-                {
-                    if ([self.inputParam1TextField isFirstResponder]) {
+            if (self.type == LeetCodeDetailUIToolTypeSuject_1 || self.type == LeetCodeDetailUIToolTypeSuject_10) {
+                
+                if ([self.inputParam1TextField isFirstResponder]) {
+                    
+                    if (self.keyboardPopHeight) {
                         
-                        if (self.keyboardPopHeight) {
-                            
-                            [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                                make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
-                            }];
-                            
-                            [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                            }];
-                            
-                            [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-                                make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
-                            }];
-                        }
-                        
-                    } else if ([self.inputParam2TextField isFirstResponder]) {
-                        
-                        [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
                             make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
                             make.height.mas_equalTo(kWIDTH_SCALE(35.f));
                             make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
                         }];
                         
-                        [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                            
+                        [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
                             make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
                             make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                            make.bottom.equalTo(self.inputParam2TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                            make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
                         }];
                         
                         [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -83,34 +60,48 @@
                             make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
                         }];
                     }
-
+                    
+                } else if ([self.inputParam2TextField isFirstResponder]) {
+                    
+                    [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                        make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                        make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
+                    }];
+                    
+                    [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        
+                        make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                        make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                        make.bottom.equalTo(self.inputParam2TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                    }];
+                    
+                    [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                        make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+                        make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                    }];
                 }
-                    break;
-                case LeetCodeDetailUIToolTypeSuject_8:
-                {
-                    if ([self.inputParam1TextField isFirstResponder]) {
-        
-                        if (self.keyboardPopHeight) {
-        
-                            [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                                make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
-                            }];
-        
-                            [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-                                make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
-                            }];
-                        }
-        
+                
+            } else if (self.type == LeetCodeDetailUIToolTypeSuject_8) {
+                
+                if ([self.inputParam1TextField isFirstResponder]) {
+                    
+                    if (self.keyboardPopHeight) {
+                        
+                        [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                            make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                            make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+                            make.bottom.equalTo(self.superView).offset(-self.keyboardPopHeight - kWIDTH_SCALE(30.f));
+                        }];
+                        
+                        [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                            make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                            make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+                            make.bottom.equalTo(self.inputParam1TextField.mas_top).offset(-kWIDTH_SCALE(30.f));
+                        }];
                     }
                 }
-                    break;
-                    
-                default:
-                    break;
             }
             
             [self.superView layoutIfNeeded];
@@ -125,44 +116,37 @@
     
     [UIView animateWithDuration:self.keyboardMoveDuration animations:^{
         
-        switch (self.type) {
-            case LeetCodeDetailUIToolTypeSuject_1:
-            {
-                [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                    make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-                }];
-                
-                [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                    make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                    make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                }];
-                
-                [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                    make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                    make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                }];
-            }
-                break;
-            case LeetCodeDetailUIToolTypeSuject_8:
-            {
-                [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                    make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-                }];
-        
-                [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                    make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                    make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-                }];
-            }
-                break;
-                
-            default:
-                break;
+        if (self.type == LeetCodeDetailUIToolTypeSuject_1 || self.type == LeetCodeDetailUIToolTypeSuject_10) {
+            
+            [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+            }];
+            
+            [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+            }];
+            
+            [self.inputParam2TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+            }];
+            
+        } else if (self.type == LeetCodeDetailUIToolTypeSuject_8) {
+            
+            [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+            }];
+            
+            [self.inputParam1TextField mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
+                make.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+            }];
         }
         
         [self.superView layoutIfNeeded];
@@ -238,7 +222,14 @@
                     
                 } else {
                     
-                    debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@", numbersList[i]]];
+                    if (i == numbersList.count - 2) {
+                        
+                        debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@", numbersList[i]]];
+                        
+                    } else {
+                        
+                        debugResultString = [debugResultString stringByAppendingString:[NSString stringWithFormat:@"%@,", numbersList[i]]];
+                    }
                 }
             }
         }
@@ -262,6 +253,47 @@
     }
     
     return revertdNumber == originNumber || revertdNumber / 10 == originNumber;
+}
+
+//MARK:合并两个有序数组
+- (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1 {
+    
+    if ([NSArray isEmptyArray:array1] || [NSArray isEmptyArray:array2]) return @[];
+    
+    int p1 = (int)array1.count - 1;
+    
+    int p2 = (int)array2.count - 1;
+    
+    NSMutableArray *mergeArray = array1.mutableCopy;
+    
+    [mergeArray addObjectsFromArray:array2];
+    
+    while (p1 >= 0 || p2 >= 0) {
+        
+        if (p1 >= 0 && p2 >= 0 && [array1[p1] intValue] > [array2[p2] intValue]) {
+            
+            mergeArray[p1 + p2 + 1] = array1[p1];
+            
+            p1--;
+            
+        } else {
+            
+            if (p2 < 0) {
+                
+                mergeArray[p1 + p2 + 1] = array1[p1];
+                
+                p1--;
+                
+            } else {
+                
+                mergeArray[p1 + p2 + 1] = array2[p2];
+                
+                p2--;
+            }
+        }
+    }
+    
+    return [mergeArray copy];
 }
 
 @end

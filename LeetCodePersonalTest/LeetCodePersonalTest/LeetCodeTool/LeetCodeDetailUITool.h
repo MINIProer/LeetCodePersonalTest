@@ -12,8 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, LeetCodeDetailUIToolType) {
-    LeetCodeDetailUIToolTypeSuject_1 = 1,       // 两数之和
-    LeetCodeDetailUIToolTypeSuject_8 = 8        // 回文数
+    LeetCodeDetailUIToolTypeSuject_1 = 1,           // 两数之和
+    LeetCodeDetailUIToolTypeSuject_8 = 8,           // 回文数
+    LeetCodeDetailUIToolTypeSuject_10 = 10          // 合并两个有序数组
 };
 
 @class NHMarkdownView, LeetCodeInputParamTextField, LeetCodeInputParamTextField;

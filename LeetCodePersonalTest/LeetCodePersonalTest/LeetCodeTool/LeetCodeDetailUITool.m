@@ -87,123 +87,109 @@
 //MARK:根据类型添加子控件
 - (void)setupSubViewsWithType:(LeetCodeDetailUIToolType)type superView:(UIView *)superView {
     
-    switch (type) {
-        case LeetCodeDetailUIToolTypeSuject_1:
-        {
-            [superView addSubview:self.mdView];
-            
-            [superView addSubview:self.inputParam1TextField];
-            
-            [superView addSubview:self.inputTip1Label];
-            
-            [superView addSubview:self.inputParam2TextField];
-            
-            [superView addSubview:self.inputTip2Label];
-            
-            [superView addSubview:self.debugButton];
-            
-            [superView addSubview:self.showDebugResultLabel];
-        }
-            break;
-        case LeetCodeDetailUIToolTypeSuject_8:
-        {
-            [superView addSubview:self.mdView];
-            
-            [superView addSubview:self.inputParam1TextField];
-            
-            [superView addSubview:self.inputTip1Label];
-            
-            [superView addSubview:self.showDebugResultLabel];
-            
-            [superView addSubview:self.debugButton];
-        }
-            break;
-            
-        default:
-            break;
+    if (type == LeetCodeDetailUIToolTypeSuject_1 || type == LeetCodeDetailUIToolTypeSuject_10) {
+        
+        [superView addSubview:self.mdView];
+        
+        [superView addSubview:self.inputParam1TextField];
+        
+        [superView addSubview:self.inputTip1Label];
+        
+        [superView addSubview:self.inputParam2TextField];
+        
+        [superView addSubview:self.inputTip2Label];
+        
+        [superView addSubview:self.debugButton];
+        
+        [superView addSubview:self.showDebugResultLabel];
+        
+    } else if (type == LeetCodeDetailUIToolTypeSuject_8) {
+        
+        [superView addSubview:self.mdView];
+        
+        [superView addSubview:self.inputParam1TextField];
+        
+        [superView addSubview:self.inputTip1Label];
+        
+        [superView addSubview:self.showDebugResultLabel];
+        
+        [superView addSubview:self.debugButton];
     }
 }
 
 //MARK:根据类型添加约束
 - (void)setupConstraintsWithType:(LeetCodeDetailUIToolType)type superView:(UIView *)superView {
     
-    switch (type) {
-        case LeetCodeDetailUIToolTypeSuject_1:
-        {
-            [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-            }];
-            
-            [self.inputParam1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-            }];
-            
-            [self.inputTip1Label mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
-                make.left.equalTo(self.inputParam1TextField);
-            }];
-            
-            [self.inputParam2TextField mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-            }];
-            
-            [self.inputTip2Label mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParam2TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
-                make.left.equalTo(self.inputParam2TextField);
-            }];
-            
-            [self.showDebugResultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParam2TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-            }];
-            
-            [self.debugButton mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.showDebugResultLabel.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.bottom.equalTo(superView).offset(-kWIDTH_SCALE(10.f));
-                make.centerX.equalTo(superView);
-                make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
-            }];
-        }
-            break;
-        case LeetCodeDetailUIToolTypeSuject_8:
-        {
-            [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                make.height.mas_equalTo(kWIDTH_SCALE(250.f));
-            }];
-            
-            [self.inputParam1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-                make.height.mas_equalTo(kWIDTH_SCALE(35.f));
-            }];
-            
-            [self.inputTip1Label mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
-                make.left.equalTo(self.inputParam1TextField);
-            }];
-            
-            [self.showDebugResultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
-            }];
-            
-            [self.debugButton mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.showDebugResultLabel.mas_bottom).offset(kWIDTH_SCALE(30.f));
-                make.bottom.equalTo(superView).offset(-kWIDTH_SCALE(10.f));
-                make.centerX.equalTo(superView);
-                make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
-            }];
-        }
-            break;
-            
-        default:
-            break;
+    if (type == LeetCodeDetailUIToolTypeSuject_1 || type == LeetCodeDetailUIToolTypeSuject_10) {
+        
+        [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+            make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+        }];
+        
+        [self.inputParam1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+            make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+        }];
+        
+        [self.inputTip1Label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
+            make.left.equalTo(self.inputParam1TextField);
+        }];
+        
+        [self.inputParam2TextField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+            make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+        }];
+        
+        [self.inputTip2Label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputParam2TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
+            make.left.equalTo(self.inputParam2TextField);
+        }];
+        
+        [self.showDebugResultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputParam2TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+        }];
+        
+        [self.debugButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showDebugResultLabel.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.bottom.equalTo(superView).offset(-kWIDTH_SCALE(10.f));
+            make.centerX.equalTo(superView);
+            make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
+        }];
+        
+    } else if (type == LeetCodeDetailUIToolTypeSuject_8) {
+        
+        [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+            make.height.mas_equalTo(kWIDTH_SCALE(250.f));
+        }];
+        
+        [self.inputParam1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mdView.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+            make.height.mas_equalTo(kWIDTH_SCALE(35.f));
+        }];
+        
+        [self.inputTip1Label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(2.f));
+            make.left.equalTo(self.inputParam1TextField);
+        }];
+        
+        [self.showDebugResultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.inputParam1TextField.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.left.right.equalTo(superView).insets(UIEdgeInsetsMake(0, kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
+        }];
+        
+        [self.debugButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showDebugResultLabel.mas_bottom).offset(kWIDTH_SCALE(30.f));
+            make.bottom.equalTo(superView).offset(-kWIDTH_SCALE(10.f));
+            make.centerX.equalTo(superView);
+            make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
+        }];
     }
 }
 
@@ -226,46 +212,38 @@
     
     NSString *subString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
-    switch (self.type) {
-        case LeetCodeDetailUIToolTypeSuject_1:
-        {
-            if (textField == self.inputParam1TextField) {
-                
-                self.param1String = subString;
-                
-                if ([NSString isEmptyString:self.param1String]) {
-                    
-                    self.inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
-                }
-                
-            } else if (textField == self.inputParam2TextField) {
-                
-                self.param2String = subString;
-                
-                if ([NSString isEmptyString:self.param2String]) {
-                    
-                    self.inputTip2Label.status = LeetCodeInputTipLabelStatusDefault;
-                }
-            }
-        }
-            break;
-        case LeetCodeDetailUIToolTypeSuject_8:
-        {
-            if (textField == self.inputParam1TextField) {
-                
-                self.param1String = subString;
-                
-                if ([NSString isEmptyString:self.param1String]) {
-                    
-                    self.inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
-                }
-                
-            }
-        }
-            break;
+    if (self.type == LeetCodeDetailUIToolTypeSuject_1 || self.type == LeetCodeDetailUIToolTypeSuject_10) {
+        
+        if (textField == self.inputParam1TextField) {
             
-        default:
-            break;
+            self.param1String = subString;
+            
+            if ([NSString isEmptyString:self.param1String]) {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
+            }
+            
+        } else if (textField == self.inputParam2TextField) {
+            
+            self.param2String = subString;
+            
+            if ([NSString isEmptyString:self.param2String]) {
+                
+                self.inputTip2Label.status = LeetCodeInputTipLabelStatusDefault;
+            }
+        }
+        
+    } else if (self.type == LeetCodeDetailUIToolTypeSuject_8) {
+        
+        if (textField == self.inputParam1TextField) {
+            
+            self.param1String = subString;
+            
+            if ([NSString isEmptyString:self.param1String]) {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusDefault;
+            }
+        }
     }
     
     return YES;
@@ -324,6 +302,33 @@
             }
             
             self.showDebugResultLabel.text = [self LeetCode8Service_isPalindrome:[self.param1String intValue]] ? [NSString stringWithFormat:@"%@：是回文数", self.param1String] : [NSString stringWithFormat:@"%@：不是回文数", self.param1String];
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_10:
+        {
+            if ([LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param1String]) {
+
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusSuccess;
+
+            } else {
+
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusFailed;
+            }
+
+            if ([LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param2String]) {
+
+                self.inputTip2Label.status = LeetCodeInputTipLabelStatusSuccess;
+
+            } else {
+
+                self.inputTip2Label.status = LeetCodeInputTipLabelStatusFailed;
+            }
+
+            if (![LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param1String] || ![LeetCodePredicateTool isValidCommaSeparatedNumbersListString:self.param2String]) return;
+
+            NSArray *mergedList = [self LeetCode10Service_mergeOrderedArray:[NSArray ascendArray:[self.param2String componentsSeparatedByString:@"~"]] toAnotherOrderedArray:[NSArray ascendArray:[self.param1String componentsSeparatedByString:@"~"]]];
+
+            self.showDebugResultLabel.text = [self LeetCode1Service_getDebugResultStringWithNumbersList:mergedList];
         }
             break;
             
@@ -430,6 +435,12 @@
         case LeetCodeDetailUIToolTypeSuject_8:
         {
             self.inputParam1TextField.placeholder = @"请输入一个整数";
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_10:
+        {
+            self.inputParam1TextField.placeholder = @"请输入整型数字，并用英文~分隔";
+            self.inputParam2TextField.placeholder = @"请输入整型数字，并用英文~分隔";
         }
             break;
             

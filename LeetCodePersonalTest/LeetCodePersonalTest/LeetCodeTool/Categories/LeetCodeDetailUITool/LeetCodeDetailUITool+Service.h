@@ -52,6 +52,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)LeetCode8Service_isPalindrome:(int)originNumber;
 
+/**
+ *  合并两个有序数组
+ *
+ *  @param array1 正整数升序数组
+ *  @param array2 正整数升序数组
+ *
+ *  @return 合并后的升序数组
+ */
+- (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1;
+
 @end
 
 NS_ASSUME_NONNULL_END

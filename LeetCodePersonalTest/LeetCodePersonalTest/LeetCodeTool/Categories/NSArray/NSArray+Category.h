@@ -44,6 +44,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSMutableArray *)deleteSameItemsInArray:(NSMutableArray *)arr;
 
+/**
+ *  数组升序
+ *
+ *  @param array 需要排序的数组
+ */
++ (NSArray *)ascendArray:(NSArray *)array;
+
 @end
 
 NS_ASSUME_NONNULL_END

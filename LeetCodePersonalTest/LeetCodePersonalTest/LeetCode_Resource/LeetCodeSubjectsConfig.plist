@@ -62,7 +62,7 @@
 			<key>subject_name</key>
 			<string>合并两个有序数组</string>
 			<key>analysis_exist</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>subject_name</key>

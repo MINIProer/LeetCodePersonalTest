@@ -49,6 +49,7 @@
 		2BA56A31238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A30238BC2BA00B2C160 /* LeetCodeBaseTableViewCell.m */; };
 		2BA56A34238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA56A33238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m */; };
 		2BA56A36238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */; };
+		2BD3E8EC2390CEE70020C4D9 /* LeetCodeSubject-10.md in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3E8EB2390CEE60020C4D9 /* LeetCodeSubject-10.md */; };
 		599D9BF83BC15854D5181765 /* Pods_LeetCodePersonalTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965701E809D5801DAB435258 /* Pods_LeetCodePersonalTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +144,7 @@
 		2BA56A32238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeHomeSubjectTableViewCell.h; sourceTree = "<group>"; };
 		2BA56A33238BC2D800B2C160 /* LeetCodeHomeSubjectTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeHomeSubjectTableViewCell.m; sourceTree = "<group>"; };
 		2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LeetCodeSubjectsConfig.plist; sourceTree = "<group>"; };
+		2BD3E8EB2390CEE60020C4D9 /* LeetCodeSubject-10.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "LeetCodeSubject-10.md"; sourceTree = "<group>"; };
 		965701E809D5801DAB435258 /* Pods_LeetCodePersonalTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeetCodePersonalTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFA2AC5216BA53E0F216686 /* Pods-LeetCodePersonalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeetCodePersonalTest.release.xcconfig"; path = "Target Support Files/Pods-LeetCodePersonalTest/Pods-LeetCodePersonalTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -379,6 +381,7 @@
 				2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */,
 				2B492E9A238CBF4E0075535A /* LeetCodeSubject-1.md */,
 				2B492EF0238F73E10075535A /* LeetCodeSubject-8.md */,
+				2BD3E8EB2390CEE60020C4D9 /* LeetCodeSubject-10.md */,
 			);
 			path = LeetCode_Resource;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 			files = (
 				2BA56A36238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist in Resources */,
 				2B308409238B6EB600972B43 /* LaunchScreen.storyboard in Resources */,
+				2BD3E8EC2390CEE70020C4D9 /* LeetCodeSubject-10.md in Resources */,
 				2B492E9B238CBF4E0075535A /* LeetCodeSubject-1.md in Resources */,
 				2B492EF1238F73E10075535A /* LeetCodeSubject-8.md in Resources */,
 				2B308406238B6EB600972B43 /* Assets.xcassets in Resources */,
