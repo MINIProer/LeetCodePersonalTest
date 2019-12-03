@@ -87,7 +87,7 @@
                     }
                 }
                 
-            } else if (self.type == LeetCodeDetailUIToolTypeSuject_8) {
+            } else if (self.type == LeetCodeDetailUIToolTypeSuject_8 || self.type == LeetCodeDetailUIToolTypeSuject_3 || self.type == LeetCodeDetailUIToolTypeSuject_5) {
                 
                 if ([self.inputParam1TextField isFirstResponder]) {
                     
@@ -139,7 +139,7 @@
                 make.height.mas_equalTo(kWIDTH_SCALE(35.f));
             }];
             
-        } else if (self.type == LeetCodeDetailUIToolTypeSuject_8) {
+        } else if (self.type == LeetCodeDetailUIToolTypeSuject_8 || self.type == LeetCodeDetailUIToolTypeSuject_3 || self.type == LeetCodeDetailUIToolTypeSuject_5) {
             
             [self.mdView mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.left.right.equalTo(self.superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
@@ -242,62 +242,32 @@
     return debugResultString;
 }
 
-//MARK:判断输入整数是否为回文数
-- (BOOL)LeetCode8Service_isPalindrome:(int)originNumber {
+//MARK:最大子序和
+- (int)LeetCode3Service_maxSubArray:(NSArray *)numbersArray {
     
-    if (originNumber < 0 || (originNumber != 0 && originNumber % 10 == 0)) return NO;
+    if ([NSArray isEmptyArray:numbersArray]) return 0;
     
-    int revertdNumber = 0;
+    int maxValue = [numbersArray[0] intValue];
     
-    while (originNumber > revertdNumber) {
+    int sum = 0;
+    
+    for (int i = 0; i < numbersArray.count; i++) {
         
-        revertdNumber = revertdNumber * 10 + originNumber % 10;
+        int number = [numbersArray[i] intValue];
         
-        originNumber /= 10;
-    }
-    
-    return revertdNumber == originNumber || revertdNumber / 10 == originNumber;
-}
-
-//MARK:合并两个有序数组
-- (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1 {
-    
-    if ([NSArray isEmptyArray:array1] || [NSArray isEmptyArray:array2]) return @[];
-    
-    int p1 = (int)array1.count - 1;
-    
-    int p2 = (int)array2.count - 1;
-    
-    NSMutableArray *mergeArray = array1.mutableCopy;
-    
-    [mergeArray addObjectsFromArray:array2];
-    
-    while (p1 >= 0 || p2 >= 0) {
-        
-        if (p1 >= 0 && p2 >= 0 && [array1[p1] intValue] > [array2[p2] intValue]) {
+        if (sum > 0) {
             
-            mergeArray[p1 + p2 + 1] = array1[p1];
-            
-            p1--;
+            sum += number;
             
         } else {
             
-            if (p2 < 0) {
-                
-                mergeArray[p1 + p2 + 1] = array1[p1];
-                
-                p1--;
-                
-            } else {
-                
-                mergeArray[p1 + p2 + 1] = array2[p2];
-                
-                p2--;
-            }
+            sum = number;
         }
+        
+        maxValue = MAX(maxValue, sum);
     }
     
-    return [mergeArray copy];
+    return maxValue;
 }
 
 //MARK:有效的括号
@@ -360,6 +330,64 @@
     }
     
     return [bracketsArrayM copy];
+}
+
+//MARK:判断输入整数是否为回文数
+- (BOOL)LeetCode8Service_isPalindrome:(int)originNumber {
+    
+    if (originNumber < 0 || (originNumber != 0 && originNumber % 10 == 0)) return NO;
+    
+    int revertdNumber = 0;
+    
+    while (originNumber > revertdNumber) {
+        
+        revertdNumber = revertdNumber * 10 + originNumber % 10;
+        
+        originNumber /= 10;
+    }
+    
+    return revertdNumber == originNumber || revertdNumber / 10 == originNumber;
+}
+
+//MARK:合并两个有序数组
+- (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1 {
+    
+    if ([NSArray isEmptyArray:array1] || [NSArray isEmptyArray:array2]) return @[];
+    
+    int p1 = (int)array1.count - 1;
+    
+    int p2 = (int)array2.count - 1;
+    
+    NSMutableArray *mergeArray = array1.mutableCopy;
+    
+    [mergeArray addObjectsFromArray:array2];
+    
+    while (p1 >= 0 || p2 >= 0) {
+        
+        if (p1 >= 0 && p2 >= 0 && [array1[p1] intValue] > [array2[p2] intValue]) {
+            
+            mergeArray[p1 + p2 + 1] = array1[p1];
+            
+            p1--;
+            
+        } else {
+            
+            if (p2 < 0) {
+                
+                mergeArray[p1 + p2 + 1] = array1[p1];
+                
+                p1--;
+                
+            } else {
+                
+                mergeArray[p1 + p2 + 1] = array2[p2];
+                
+                p2--;
+            }
+        }
+    }
+    
+    return [mergeArray copy];
 }
 
 @end

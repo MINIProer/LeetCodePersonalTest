@@ -40,11 +40,20 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  是否为~分隔的整型字符串
  *
- *  @param numbersListString ~分隔的整型字符串
+ *  @param bracketsListString ~分隔的整型字符串
  *
  *  @return YES/NO
  */
 + (BOOL)isValidCommaSeparatedBracketsListString:(NSString *)bracketsListString;
+
+/**
+ *  是否为~分隔的整数(正整数、负整数、零)字符串
+ *
+ *  @param numbersListString 整数(正整数、负整数、零)字符串
+ *
+ *  @return YES/NO
+ */
++ (BOOL)isValidCommaSeparatedAllNumbersListString:(NSString *)numbersListString;
 
 @end
 

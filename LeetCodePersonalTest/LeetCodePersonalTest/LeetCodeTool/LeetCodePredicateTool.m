@@ -42,4 +42,12 @@
     return [CommaSeparatedBracketsListStringTest evaluateWithObject:bracketsListString];
 }
 
+//MARK:是否为~分隔的整数(正整数、负整数、零)字符串
++ (BOOL)isValidCommaSeparatedAllNumbersListString:(NSString *)numbersListString {
+    NSString *CommaSeparatedAllNumbersListStringRegex = @"-?\\d+(~(-?\\d)+)*";
+    NSPredicate *CommaSeparatedAllNumbersListStringTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CommaSeparatedAllNumbersListStringRegex];
+    
+    return [CommaSeparatedAllNumbersListStringTest evaluateWithObject:numbersListString];
+}
+
 @end

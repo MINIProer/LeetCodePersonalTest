@@ -44,23 +44,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)LeetCode1Service_getDebugResultStringWithNumbersList:(NSArray *)numbersList;
 
 /**
- *  判断输入整数是否为回文数
+ *  最大子序和
  *
- *  @param originNumber 整数
+ *  @param numbersArray 整数数组
  *
- *  @return YES/NO
+ *  @return 最大子序和
  */
-- (BOOL)LeetCode8Service_isPalindrome:(int)originNumber;
-
-/**
- *  合并两个有序数组
- *
- *  @param array1 正整数升序数组
- *  @param array2 正整数升序数组
- *
- *  @return 合并后的升序数组
- */
-- (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1;
+- (int)LeetCode3Service_maxSubArray:(NSArray *)numbersArray;
 
 /**
  *  有效的括号
@@ -79,6 +69,25 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return 括号字符数组
  */
 - (NSArray *)LeetCode5Service_convertToBracketsArray:(NSString *)brackets;
+
+/**
+ *  判断输入整数是否为回文数
+ *
+ *  @param originNumber 整数
+ *
+ *  @return YES/NO
+ */
+- (BOOL)LeetCode8Service_isPalindrome:(int)originNumber;
+
+/**
+ *  合并两个有序数组
+ *
+ *  @param array1 正整数升序数组
+ *  @param array2 正整数升序数组
+ *
+ *  @return 合并后的升序数组
+ */
+- (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1;
 
 @end
 

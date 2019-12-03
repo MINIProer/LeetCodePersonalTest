@@ -104,7 +104,7 @@
         
         [superView addSubview:self.showDebugResultLabel];
         
-    } else if (type == LeetCodeDetailUIToolTypeSuject_8 || type == LeetCodeDetailUIToolTypeSuject_5) {
+    } else if (type == LeetCodeDetailUIToolTypeSuject_8 || type == LeetCodeDetailUIToolTypeSuject_5 || type == LeetCodeDetailUIToolTypeSuject_3) {
         
         [superView addSubview:self.mdView];
         
@@ -162,7 +162,7 @@
             make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
         }];
         
-    } else if (type == LeetCodeDetailUIToolTypeSuject_8 || type == LeetCodeDetailUIToolTypeSuject_5) {
+    } else if (type == LeetCodeDetailUIToolTypeSuject_8 || type == LeetCodeDetailUIToolTypeSuject_5 || type == LeetCodeDetailUIToolTypeSuject_3) {
         
         [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
@@ -234,7 +234,7 @@
             }
         }
         
-    } else if (self.type == LeetCodeDetailUIToolTypeSuject_8 || self.type == LeetCodeDetailUIToolTypeSuject_5) {
+    } else if (self.type == LeetCodeDetailUIToolTypeSuject_8 || self.type == LeetCodeDetailUIToolTypeSuject_5 || self.type == LeetCodeDetailUIToolTypeSuject_3) {
         
         if (textField == self.inputParam1TextField) {
             
@@ -287,6 +287,22 @@
             NSArray *indexList = [self LeetCode1Service_findTheIndexListWithNumbers:[self.param1String componentsSeparatedByString:@"~"] targetNumber:[self.param2String intValue]];
             
             self.showDebugResultLabel.text = [self LeetCode1Service_getDebugResultStringWithNumbersList:indexList];
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_3:
+        {
+            if ([LeetCodePredicateTool isValidCommaSeparatedAllNumbersListString:self.param1String]) {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusSuccess;
+                
+            } else {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusFailed;
+                
+                return;
+            }
+            
+            self.showDebugResultLabel.text = [NSString stringWithFormat:@"最大子序和为：%d", [self LeetCode3Service_maxSubArray:[self.param1String componentsSeparatedByString:@"~"]]];
         }
             break;
         case LeetCodeDetailUIToolTypeSuject_5:
@@ -447,6 +463,11 @@
         {
             self.inputParam1TextField.placeholder = @"请输入整型数字，并用英文~分隔";
             self.inputParam2TextField.placeholder = @"请输入目标整形数字";
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_3:
+        {
+            self.inputParam1TextField.placeholder = @"请输入一串整数，并用英文~分隔";
         }
             break;
         case LeetCodeDetailUIToolTypeSuject_5:

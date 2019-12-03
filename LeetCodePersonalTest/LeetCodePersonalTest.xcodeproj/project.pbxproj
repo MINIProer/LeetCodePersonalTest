@@ -34,6 +34,7 @@
 		2B492EF1238F73E10075535A /* LeetCodeSubject-8.md in Resources */ = {isa = PBXBuildFile; fileRef = 2B492EF0238F73E10075535A /* LeetCodeSubject-8.md */; };
 		2B492EF4238FA76B0075535A /* LeetCodeSubjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B492EF3238FA76B0075535A /* LeetCodeSubjectDetailViewController.m */; };
 		2B61EB282396153100A854C6 /* LeetCodeSubject-5.md in Resources */ = {isa = PBXBuildFile; fileRef = 2B61EB272396153100A854C6 /* LeetCodeSubject-5.md */; };
+		2B61EB2A23963D5D00A854C6 /* LeetCodeSubject-3.md in Resources */ = {isa = PBXBuildFile; fileRef = 2B61EB2923963D5D00A854C6 /* LeetCodeSubject-3.md */; };
 		2BA56A04238BB9E000B2C160 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569E8238BB9E000B2C160 /* UIImage+Category.m */; };
 		2BA56A05238BB9E000B2C160 /* NSMutableAttributedString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EC238BB9E000B2C160 /* NSMutableAttributedString+Category.m */; };
 		2BA56A06238BB9E000B2C160 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA569EF238BB9E000B2C160 /* UILabel+Category.m */; };
@@ -114,6 +115,7 @@
 		2B492EF2238FA76B0075535A /* LeetCodeSubjectDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeSubjectDetailViewController.h; sourceTree = "<group>"; };
 		2B492EF3238FA76B0075535A /* LeetCodeSubjectDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeSubjectDetailViewController.m; sourceTree = "<group>"; };
 		2B61EB272396153100A854C6 /* LeetCodeSubject-5.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "LeetCodeSubject-5.md"; sourceTree = "<group>"; };
+		2B61EB2923963D5D00A854C6 /* LeetCodeSubject-3.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "LeetCodeSubject-3.md"; sourceTree = "<group>"; };
 		2BA5697C238BB49600B2C160 /* LJMacroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMacroDefinition.h; sourceTree = "<group>"; };
 		2BA569E8238BB9E000B2C160 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		2BA569E9238BB9E000B2C160 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				2B308405238B6EB600972B43 /* Assets.xcassets */,
 				2BA56A35238BD9B400B2C160 /* LeetCodeSubjectsConfig.plist */,
 				2B492E9A238CBF4E0075535A /* LeetCodeSubject-1.md */,
+				2B61EB2923963D5D00A854C6 /* LeetCodeSubject-3.md */,
 				2B61EB272396153100A854C6 /* LeetCodeSubject-5.md */,
 				2B492EF0238F73E10075535A /* LeetCodeSubject-8.md */,
 				2BD3E8EB2390CEE60020C4D9 /* LeetCodeSubject-10.md */,
@@ -563,6 +566,7 @@
 				2B308409238B6EB600972B43 /* LaunchScreen.storyboard in Resources */,
 				2B61EB282396153100A854C6 /* LeetCodeSubject-5.md in Resources */,
 				2BD3E8EC2390CEE70020C4D9 /* LeetCodeSubject-10.md in Resources */,
+				2B61EB2A23963D5D00A854C6 /* LeetCodeSubject-3.md in Resources */,
 				2B492E9B238CBF4E0075535A /* LeetCodeSubject-1.md in Resources */,
 				2B492EF1238F73E10075535A /* LeetCodeSubject-8.md in Resources */,
 				2B308406238B6EB600972B43 /* Assets.xcassets in Resources */,
