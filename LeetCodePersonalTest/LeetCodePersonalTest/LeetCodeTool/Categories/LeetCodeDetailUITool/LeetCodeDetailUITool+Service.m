@@ -8,6 +8,7 @@
 
 #import "LeetCodeDetailUITool+Service.h"
 #import "NSArray+Category.h"
+#import "NSString+Category.h"
 
 // View
 #import "LeetCodeInputParamTextField.h"
@@ -297,6 +298,68 @@
     }
     
     return [mergeArray copy];
+}
+
+//MARK:有效的括号
+- (BOOL)LeetCode5Service_isValidBrackets:(NSString *)brackets {
+    
+    if ([NSString isEmptyString:brackets]) return NO;
+    
+    NSDictionary *map = @{
+                          @")" : @"(",
+                          @"]" : @"[",
+                          @"}" : @"{",
+                          };
+    
+    NSArray *bracketsArray = [self LeetCode5Service_convertToBracketsArray:brackets];
+    
+    NSMutableArray *stack = [NSMutableArray array];
+    
+    for (int i = 0; i < bracketsArray.count; i++) {
+        
+        if ([map.allKeys containsObject:bracketsArray[i]]) {
+            
+            NSString *stackTopElement;
+            
+            if ([NSArray isEmptyArray:stack]) {
+                
+                stackTopElement = @"*";
+                
+            } else {
+                
+                stackTopElement = stack.lastObject;
+                
+                [stack removeLastObject];
+            }
+            
+            if (![stackTopElement isEqualToString:map[bracketsArray[i]]]) return NO;
+            
+        } else {
+            
+            [stack addObject:bracketsArray[i]];
+        }
+    }
+    
+    return [NSArray isEmptyArray:stack];
+}
+
+//MARK:括号字符串转换为括号字符数组
+- (NSArray *)LeetCode5Service_convertToBracketsArray:(NSString *)brackets {
+    
+    if ([NSString isEmptyString:brackets]) return @[];
+    
+    NSMutableArray *bracketsArrayM = [NSMutableArray array];
+    
+    unsigned char c[brackets.length];
+    
+    memcpy(c, [brackets cStringUsingEncoding:NSUTF8StringEncoding], brackets.length);
+    
+    for (int i = 0; i < sizeof(c); i++) {
+        
+        [bracketsArrayM addObject:[NSString stringWithFormat:@"%c", c[i]]];
+    }
+    
+    return [bracketsArrayM copy];
 }
 
 @end

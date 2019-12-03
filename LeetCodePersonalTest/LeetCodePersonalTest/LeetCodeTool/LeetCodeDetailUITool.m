@@ -104,7 +104,7 @@
         
         [superView addSubview:self.showDebugResultLabel];
         
-    } else if (type == LeetCodeDetailUIToolTypeSuject_8) {
+    } else if (type == LeetCodeDetailUIToolTypeSuject_8 || type == LeetCodeDetailUIToolTypeSuject_5) {
         
         [superView addSubview:self.mdView];
         
@@ -162,7 +162,7 @@
             make.size.mas_equalTo(CGSizeMake(kScreenWidth - kWIDTH_SCALE(20.f), kWIDTH_SCALE(35.f)));
         }];
         
-    } else if (type == LeetCodeDetailUIToolTypeSuject_8) {
+    } else if (type == LeetCodeDetailUIToolTypeSuject_8 || type == LeetCodeDetailUIToolTypeSuject_5) {
         
         [self.mdView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.equalTo(superView).insets(UIEdgeInsetsMake(kScreenTopHeight + kWIDTH_SCALE(10.f), kWIDTH_SCALE(10.f), 0, kWIDTH_SCALE(10.f)));
@@ -234,7 +234,7 @@
             }
         }
         
-    } else if (self.type == LeetCodeDetailUIToolTypeSuject_8) {
+    } else if (self.type == LeetCodeDetailUIToolTypeSuject_8 || self.type == LeetCodeDetailUIToolTypeSuject_5) {
         
         if (textField == self.inputParam1TextField) {
             
@@ -287,6 +287,22 @@
             NSArray *indexList = [self LeetCode1Service_findTheIndexListWithNumbers:[self.param1String componentsSeparatedByString:@"~"] targetNumber:[self.param2String intValue]];
             
             self.showDebugResultLabel.text = [self LeetCode1Service_getDebugResultStringWithNumbersList:indexList];
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_5:
+        {
+            if ([LeetCodePredicateTool isValidCommaSeparatedBracketsListString:self.param1String]) {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusSuccess;
+                
+            } else {
+                
+                self.inputTip1Label.status = LeetCodeInputTipLabelStatusFailed;
+                
+                return;
+            }
+            
+            self.showDebugResultLabel.text = [self LeetCode5Service_isValidBrackets:self.param1String] ? [NSString stringWithFormat:@"%@：是有效的括号", self.param1String] : [NSString stringWithFormat:@"%@：不是有效的括号", self.param1String];
         }
             break;
         case LeetCodeDetailUIToolTypeSuject_8:
@@ -431,6 +447,11 @@
         {
             self.inputParam1TextField.placeholder = @"请输入整型数字，并用英文~分隔";
             self.inputParam2TextField.placeholder = @"请输入目标整形数字";
+        }
+            break;
+        case LeetCodeDetailUIToolTypeSuject_5:
+        {
+            self.inputParam1TextField.placeholder = @"请输入括号字符串，eg:{(()[]]{}";
         }
             break;
         case LeetCodeDetailUIToolTypeSuject_8:

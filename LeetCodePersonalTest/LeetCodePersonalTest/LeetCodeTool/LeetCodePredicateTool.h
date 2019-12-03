@@ -37,6 +37,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (BOOL)isValidIntegerString:(NSString *)integerString;
 
+/**
+ *  是否为~分隔的整型字符串
+ *
+ *  @param numbersListString ~分隔的整型字符串
+ *
+ *  @return YES/NO
+ */
++ (BOOL)isValidCommaSeparatedBracketsListString:(NSString *)bracketsListString;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -34,4 +34,12 @@
     return [integerStringTest evaluateWithObject:integerString];
 }
 
+//MARK:是否为~分隔的括号字符串
++ (BOOL)isValidCommaSeparatedBracketsListString:(NSString *)bracketsListString {
+    NSString *CommaSeparatedBracketsListStringRegex = @"([(]|[)]|[{]|[}]|[\\[]|[\\]])*";
+    NSPredicate *CommaSeparatedBracketsListStringTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CommaSeparatedBracketsListStringRegex];
+    
+    return [CommaSeparatedBracketsListStringTest evaluateWithObject:bracketsListString];
+}
+
 @end

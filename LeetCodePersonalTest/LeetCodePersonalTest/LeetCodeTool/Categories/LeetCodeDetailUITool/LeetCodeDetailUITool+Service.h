@@ -62,6 +62,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSArray *)LeetCode10Service_mergeOrderedArray:(NSArray *)array2 toAnotherOrderedArray:(NSArray *)array1;
 
+/**
+ *  有效的括号
+ *
+ *  @param brackets 括号字符串
+ *
+ *  @return YES/NO
+ */
+- (BOOL)LeetCode5Service_isValidBrackets:(NSString *)brackets;
+
+/**
+ *  括号字符串转换为括号字符数组
+ *
+ *  @param brackets 括号字符串
+ *
+ *  @return 括号字符数组
+ */
+- (NSArray *)LeetCode5Service_convertToBracketsArray:(NSString *)brackets;
+
 @end
 
 NS_ASSUME_NONNULL_END

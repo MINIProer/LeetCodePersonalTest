@@ -18,9 +18,11 @@
 
 // Tool
 #import "LJMacroDefinition.h"
+#import "LeetCodePredicateTool.h"
 
 // Category
 #import "NSArray+Category.h"
+#import "NSString+Category.h"
 
 // Pod
 #import <Masonry/Masonry.h>
